@@ -1,0 +1,119 @@
+/* Button Styles */
+
+.button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	-webkit-transition: all 0.3s ease;
+  	-moz-transition:    all 0.3s ease;
+  	-ms-transition:     all 0.3s ease;
+  	-o-transition:      all 0.3s ease;
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+
+.black {
+	border: solid 2px #333;
+}
+.black:hover {
+	color: #d7d7d7;
+	background: #333;
+}
+
+.gray {
+	color: #999;
+	border: solid 2px #999;
+}
+
+.gray:hover {
+	color: #e9e9e9;
+	background: #999;
+}
+
+.orange {
+	border: solid 2px #da7c0c;
+}
+.orange:hover {
+	color: #fef4e9;
+	background:  #da7c0c;
+}
+
+.red {
+	border: solid 2px #980c10;
+}
+.red:hover {
+	color: #faddde;
+	background: #980c10;
+}
+
+.blue {
+	border: solid 2px #0076a3;
+}
+.blue:hover {
+	color: #d9eef7;
+	background: #0076a3;
+}
+
+.green {
+	border: solid 2px #538312;
+}
+.green:hover {
+	color: #e8f0de;
+	background: #538312;
+}
+
+.pink {
+	border: solid 2px #d2729e;
+}
+.pink:hover {
+	color: #feeef5;
+	background:#d2729e;
+}
+
+
+.half {
+	width: 47%;
+	float: left;
+	margin-right: 3%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.onethird {
+	width: 30%;
+	float: left;
+	margin-right: 3%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.twothirds {
+	width: 64%;
+	float: left;
+	margin-right: 3%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px)  {
+	.half, .onethird, .twothirds {
+		width: 100%;
+		margin-right: 0;
+	}
+	
+}

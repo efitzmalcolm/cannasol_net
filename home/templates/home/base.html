@@ -1,0 +1,45 @@
+<!doctype html>
+
+{% load staticfiles %}
+
+<html class=" js no-touch csstransforms3d csstransitions" lang="en-US">
+<head>
+  <meta charset="utf-8">
+
+  <title>CannaSol Farms</title>
+
+  <link rel='stylesheet' id='indigo-open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <link rel="stylesheet" href="{% static 'home/css/buttons.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/misc.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/slider.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/cannasol.css' %}">
+
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+</head>
+
+<body class="home blog">
+  <div id="container">
+    {% include 'home/header.html' %}
+    {#% include 'home/slider.html' %#}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'home/footer.html' %}
+  </div>
+  <script type="text/javascript" src="{% static "home/js/superfish.js" %}"></script>
+  <script type="text/javascript" src="https://raw.githubusercontent.com/WickyNilliams/headroom.js/v0.7.0/dist/headroom.min.js"></script>
+  <script type="text/javascript" src="{% static "home/js/jquery.onscreen.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "home/js/modernizer.js" %}"></script>
+  <script type="text/javascript" src="{% static "home/js/jquery.ba-cond.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "home/js/jquery.slitslider.js" %}"></script>
+  <script type="text/javascript" src="{% static "home/js/mobilemenu.js" %}"></script>
+
+</body>
+</html>
