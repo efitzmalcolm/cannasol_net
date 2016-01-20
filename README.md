@@ -1,3 +1,3 @@
 #CannaSol.net
 
-Please see *CONTRIBUTING.md* for guidelines.
+Please see **CONTRIBUTING.md** for guidelines.
