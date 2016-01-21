@@ -1346,6 +1346,11 @@ a.googleplusicon:before {
 	}
 	
 	#socialize a {
+		width: 100%;
+        float: left;
+		clear: left;
+		text-align: center;
+		margin-top: 40px;
 	}
 	
 	.select-menu {
