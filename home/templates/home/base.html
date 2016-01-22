@@ -24,15 +24,18 @@
 
 <body class="home blog">
   <div id="container">
-    {% block content %}
+  
     {% include 'home/header.html' %}
     {% include 'home/slider.html' %}
     {% include 'home/services.html' %}
     {% include 'home/front widget.html' %}
+    
+    {% block content %}
+    {% endblock content %}
+    
     {% include 'home/team.html' %}
     {% include 'home/text boxes.html' %}
     {% include 'home/footer.html' %}
-    {% endblock %}
     
   </div>
   
