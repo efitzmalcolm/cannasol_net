@@ -1,3 +1,9 @@
-<!DOCTYPE html>
-
 {% extends 'home/base.html' %}
+
+    {% block content %}
+    {% include 'home/slider.html' %}
+    {% include 'home/services.html' %}
+    {% include 'home/front widget.html' %}
+    {% include 'home/team.html' %}
+    {% include 'home/text boxes.html' %}
+    {% endblock content %}
