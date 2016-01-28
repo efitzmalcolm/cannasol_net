@@ -217,7 +217,6 @@ transition: .5s;
 	width: 70%;
 	float: right;
 	margin-top: 22px;
-	*width: 900px; /* IE7 only hack */
 }
 
 .mainnav {
@@ -353,7 +352,6 @@ ul.mainnav li li.sfHover ul {
 	width: 85%;
 	padding-left: 10%;
 	background: none;
-	border: none;
 	height: 30px;
 	margin-top: 10px;
 	border: solid 2px #eaeaea;
@@ -488,11 +486,11 @@ a.servicelink:hover {
 }
 
 a.servicelink:hover .attachment-servicethumb {
-	transform:scale(1.04);
     -ms-transform:scale(1.04); /* IE 9 */
     -moz-transform:scale(1.04); /* Firefox */
     -webkit-transform:scale(1.04); /* Safari and Chrome */
     -o-transform:scale(1.04); /* Opera */
+	transform:scale(1.04);
 }
 
 .servicespost h2.entry-title a,
@@ -776,7 +774,6 @@ a.servicelink:hover .attachment-servicethumb {
 .artsubtitle {
 	color: #fff;
 	text-align: left;
-	margin-top: 0;
 	font-size: 16px;
 	font-weight: 400;
 	margin-top: 5px;
@@ -993,7 +990,6 @@ ul {
 }
 	
 #commentform h3 {
-	font-size: 10pt;
 	font-family: 'Arvo', arial, sans-serif;
 	font-weight: 400;
 	color: #000;

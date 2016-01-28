@@ -3,6 +3,7 @@
 .button {
 	display: inline-block;
 	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
 	vertical-align: baseline;
 	margin: 0 2px;
 	outline: none;
@@ -195,8 +196,7 @@ img {
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 
-/* Make sure videos and embeds fit their containers */
-
+* Make sure videos and embeds fit their containers */
 embed,
 iframe,
 object,
@@ -686,7 +686,6 @@ p.form-allowed-tags {
 }
 
 
-
 /* Animations for content elements */
 
 .sl-trans-elems .deco{
@@ -831,6 +830,7 @@ p.form-allowed-tags {
 	0% {opacity: 1;}
 	100% {opacity: 0;}
 }
+
 
 /* Media Queries for custom slider */
 
