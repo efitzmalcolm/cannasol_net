@@ -373,7 +373,7 @@
             }
             if( config.orientation !== 'vertical' && config.orientation !== 'horizontal' ) {
             
-                config.orientation = 'horizontal'
+                config.orientation = 'horizontal';
             
             }
             
