@@ -22,6 +22,7 @@ PREREQ_APPS = [
 
 PROJECT_APPS = [
     'home',
+    'strains',
 ]
 
 INSTALLED_APPS = PREREQ_APPS + PROJECT_APPS

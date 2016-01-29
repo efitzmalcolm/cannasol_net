@@ -1,5 +1,8 @@
 from django.contrib import admin
-from cannasol_net.strains.models import *
+from strains.models import *
 
 
-admin.site.register(Strain, Brand, qaSample, Terpene)
+admin.site.register(Strain)
+admin.site.register(Brand)
+admin.site.register(qaSample)
+admin.site.register(Terpene)
