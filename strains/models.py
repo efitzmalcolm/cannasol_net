@@ -40,7 +40,7 @@ class qaSample(models.Model):
     sample_type = models.CharField(max_length=25)
     strain = models.ForeignKey('Strain')
 
-    lab_id = models.CharField()
+    lab_id = models.CharField(max_length=16)
     sample_id = models.CharField(max_length=16)
     lot_id = models.CharField(max_length=16)
 
