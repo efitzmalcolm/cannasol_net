@@ -134,11 +134,11 @@ a:hover {
   	width: 100%; 
 	float: left;
 	clear: left;
-	padding-bottom: 5px;
+	padding-bottom: 15px;
 	position: fixed;
 	z-index: 9999;
-	background: #fff;
-	border-bottom: solid 3px #eaeaea;
+	background: #8E8870;
+	border-bottom: solid 3px #dce0df;
 }
 
 .headroom {
@@ -250,14 +250,14 @@ transition: .5s;
 
 .mainnav a {
 	display: block;
-	padding: 3px 12px ;
+	padding: 3px 30px ;
 	font-size: 13px;
 	font-weight: 400;
-	color: #404040;
+	color: #dce0df;
 	text-decoration: none;
 	font-family: 'Open Sans', arial, helvetica;
 	text-transform: uppercase;
-	border: solid 2px #fff;
+	border: solid 2px #dce0df;
 	-webkit-transition: all 0.3s ease;
   	-moz-transition:    all 0.3s ease;
   	-ms-transition:     all 0.3s ease;
@@ -266,7 +266,7 @@ transition: .5s;
 
 .mainnav li.current-menu-item a,
 .mainnav li:hover a {
-	border: solid 2px #4dbfd9;
+	border: solid 2px #fff;
 	
 }
 
@@ -274,7 +274,7 @@ transition: .5s;
 ul.mainnav li.sfHover ul {
 	left: 0;
 	top: 37px;
-	background: #fff;
+	background: #8E8870;
 	border: solid 2px #eaeaea;
 	width: 170px;
 }
@@ -330,7 +330,7 @@ ul.mainnav li li.sfHover ul {
 .mainnav li li a:hover {
 	text-decoration: none !important;
 	border: none !important;
-	color: #999;
+	color: #4E4E4E;
 }
 
 .select-menu {display: none;}
@@ -871,7 +871,7 @@ a.more-link {
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 3px 12px;
-	border: solid 2px #4dbfd9;
+	border: solid 2px #4E4E4E;
 	margin-top: 10px;
 	float: left;
 	display: block;
@@ -1153,7 +1153,7 @@ cite a {
 	width: 100%;
 	padding-top: 80px;
 	padding-bottom: 40px;
-	background: #eaeaea;
+	background: #8E8870;
 	position: relative;
 	font-size: 13px;
 	line-height: 150%;
@@ -1235,9 +1235,9 @@ ul {
 
 ul.footer-link{ width:100%; float:left; padding:0; margin:0 0 30px 50px;}
 ul.footer-link li{ width:100%; float:left; padding:0; margin:0 0 15px 0;}
-ul.footer-link li a{ float:left; padding:0; margin:0; font-size:15px; color:#333;}
-ul.footer-link li a strong{ font-weight:700; color:#333;}
-ul.footer-link li a:hover{ color:#1e572a;}
+ul.footer-link li a{ float:left; padding:0; margin:0; font-size:15px; color:#fff;}
+ul.footer-link li a strong{ font-weight:700; color:#fff;}
+ul.footer-link li a:hover{ color:#BFBFBF;}
 
 #copyinfo {
 	width: 100%;
@@ -1248,7 +1248,7 @@ ul.footer-link li a:hover{ color:#1e572a;}
 	text-transform: uppercase;
 	font-size: 14px;
 	font-weight: 400;
-	color: #666;
+	color: #fff;
 	margin-top: 20px;
 	margin-bottom: 50px;
 }
@@ -1267,9 +1267,9 @@ a.socialicon {
 	text-align: center;
 	margin-right: 5px;
 	margin-left: 5px;
-	color: #666;
+	color: #fff;
 	display: inline-block;
-	border: solid 1px #666;
+	border: solid 1px #fff;
 	-webkit-transition: all 0.3s ease;
   	-moz-transition:    all 0.3s ease;
   	-ms-transition:     all 0.3s ease;
