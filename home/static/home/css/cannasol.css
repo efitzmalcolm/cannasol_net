@@ -266,7 +266,8 @@ transition: .5s;
 
 .mainnav li.current-menu-item a,
 .mainnav li:hover a {
-	border: solid 2px #fff;
+	color: #BFBFBF;
+	border: solid 2px #BFBFBF;
 	
 }
 
@@ -274,8 +275,7 @@ transition: .5s;
 ul.mainnav li.sfHover ul {
 	left: 0;
 	top: 37px;
-	background: #8E8870;
-	border: solid 2px #eaeaea;
+	background: #dce0df;
 	width: 170px;
 }
 
@@ -315,6 +315,7 @@ ul.mainnav li li.sfHover ul {
 .mainnav li li a:link, 
 .mainnav li li a:visited {	
 	display: block;
+	color: #8E8870;
 	border: none;
 	text-transform: uppercase;
 	font-weight: 300;
@@ -330,7 +331,7 @@ ul.mainnav li li.sfHover ul {
 .mainnav li li a:hover {
 	text-decoration: none !important;
 	border: none !important;
-	color: #4E4E4E;
+	color: #BFBFBF;
 }
 
 .select-menu {display: none;}
@@ -866,12 +867,13 @@ h2.pagetitle {
 
 a.more-link {
 	font-weight: 400;
-	color: #403f41;
+	color: #dce0df;
+	background: #8E8870;
 	font-size: 12px;
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 3px 12px;
-	border: solid 2px #4E4E4E;
+	border: solid 2px #dce0df;
 	margin-top: 10px;
 	float: left;
 	display: block;
@@ -882,7 +884,8 @@ a.more-link {
 }
 
 a.more-link:hover {
-	border: solid 2px #d8d8d8;
+	color: #BFBFBF;
+	border: solid 2px #BFBFBF;
 }
 
 ol {
@@ -1155,8 +1158,62 @@ cite a {
 	padding-bottom: 40px;
 	background: #8E8870;
 	position: relative;
-	font-size: 13px;
+	font-size: 17px;
 	line-height: 150%;
+}
+
+#footer h3 {
+	font-weight: 600;
+	color: #dce0df;
+	text-transform: uppercase;
+	font-size: 22px;
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+#footer p {
+	font-weight: 600;
+	color: #dce0df;
+	font-size: 14px;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+#footer ul {
+	padding: 0 0 25 0;
+	margin: 0;
+	width: 100%;
+	float: left;
+	clear: left;
+}
+
+#footer ul li {
+	padding: 0;
+	margin: 0;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	list-style: none;
+	width: 100%;
+	float: left;
+	clear: left;
+}
+
+#footer ul li ul li {
+	border: none;
+	list-style: none;
+	margin-left: 0;
+	margin-top: 2px;
+	float: left;
+	clear: left;
+	width: 100%;
+}
+
+#footer ul li a {
+	border: none;
+	color: #dce0df;
+	text-decoration: underline;
+	padding: 0;
+	margin: 0;
 }
 
 #footerinner {
@@ -1232,12 +1289,6 @@ ul {
     -webkit-margin-end: 0px;
     -webkit-padding-start: 40px;
 }
-
-ul.footer-link{ width:100%; float:left; padding:0; margin:0 0 30px 50px;}
-ul.footer-link li{ width:100%; float:left; padding:0; margin:0 0 15px 0;}
-ul.footer-link li a{ float:left; padding:0; margin:0; font-size:15px; color:#fff;}
-ul.footer-link li a strong{ font-weight:700; color:#fff;}
-ul.footer-link li a:hover{ color:#BFBFBF;}
 
 #copyinfo {
 	width: 100%;
