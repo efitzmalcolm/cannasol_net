@@ -6,7 +6,7 @@ body,html{
 body {
 	background: #fff;
 	color: #333;
-	font-family: 'Open Sans', arial, helvetica, tahoma, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 	margin:0;
@@ -21,7 +21,7 @@ h1 {
 	color: #000;
 	margin-top: 20px;
 	text-transform: none;
-	font-family: 'Open Sans', arial, helvetica, tahoma, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 	font-weight: 400;
 }
 
@@ -33,7 +33,7 @@ h2 {
 	text-transform: none;
 	font-weight: 400;
 	font-size: 22px;
-	font-family: 'Open Sans', arial, helvetica, tahoma, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 }
 
 h3 {
@@ -44,7 +44,7 @@ h3 {
 	text-transform: none;
 	font-weight: 400;
 	font-size: 20px;
-	font-family: 'Open Sans', arial, helvetica, tahoma, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 }
 
 h4 {
@@ -55,7 +55,7 @@ h4 {
 	text-transform: none;
 	font-weight: 400;
 	font-size: 16px;
-	font-family: 'Open Sans', arial, helvetica, tahoma, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 }
 
 h5 {
@@ -66,7 +66,7 @@ h5 {
 	text-transform: none;
 	font-weight: 400;
 	font-size: 12px;
-	font-family: 'Open Sans', arial, helvetica, tahoma, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 }
 
 p { margin-top: 6px; }
@@ -206,7 +206,7 @@ transition: .5s;
 	color: #404040;
 	text-transform: uppercase;
 	text-decoration: none;
-	font-family: 'Open Sans', arial, helvetica, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 	margin-top: 10px;
 	line-height: 100%;
 }
@@ -255,7 +255,7 @@ transition: .5s;
 	font-weight: 400;
 	color: #dce0df;
 	text-decoration: none;
-	font-family: 'Open Sans', arial, helvetica;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 	text-transform: uppercase;
 	-webkit-transition: all 0.3s ease;
   	-moz-transition:    all 0.3s ease;
@@ -356,7 +356,7 @@ ul.mainnav li li.sfHover ul {
 	height: 30px;
 	margin-top: 10px;
 	border: solid 2px #eaeaea;
-	font-family: 'Open Sans', arial, helvetica;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 	font-weight: 400;
 	color: #666;
 }
@@ -555,7 +555,7 @@ a.servicelink:hover .attachment-servicethumb {
 	width: 100%;
 	float: left;
 	clear: left;
-	font-family: 'Open Sans', arial, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 	font-weight: 400;
 	color: #fff;
 	font-size: 30px;
@@ -568,7 +568,7 @@ a.servicelink:hover .attachment-servicethumb {
 
 
 #frontwidget h2 {
-	font-family: 'Open Sans', arial, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 	font-weight: 400;
 	color: #fff;
 	text-transform: uppercase;
@@ -985,7 +985,7 @@ ul.footer-link{ width:100%; float:left; padding:0 0 0 40px; margin:0 50px 30px 0
 ul.footer-link li{ width:100%; float:left; padding:0; margin:0 0 15px 0;}
 ul.footer-link li a{ float:left; padding:0; margin:0; font-size:17px; color:#dce0df;}
 ul.footer-link li a strong{ font-weight:700; color:#dce0df;}
-ul.footer-link li a:hover{ color:#4E4E4E;}
+ul.footer-link li a:hover{ color:#BFBFBF;}
 
 .newsletter{ width:100%; float:left; padding:0; margin:0 0 30px 0;}
 .newsletter p{ width:100%; float:left; padding:0; margin:0 0 26px 0; font-size:16px; color:#dce0df; line-height:24px;}
@@ -997,7 +997,7 @@ ul.footer-link li a:hover{ color:#4E4E4E;}
 .footer-contact p{ width:100%; float:left; padding:0; margin:0 0 13px 0; font-size:14px; color:#dce0df; line-height:22px;}
 .footer-contact p strong{ font-weight:600; font-size:16px; color:#dce0df;}
 .footer-contact p a{ color:#dce0df;}
-.footer-contact p a:hover{ color:#4E4E4E;}
+.footer-contact p a:hover{ color:#BFBFBF;}
 
 .footer-contact ul{ width:100%; float:left; padding:0; margin:35px 0 0 0;}
 .footer-contact li{ padding:0; margin:0 5px 0 0; display:inline-block;}
@@ -1046,7 +1046,7 @@ ul.footer-link li a:hover{ color:#4E4E4E;}
 	float: left;
 	clear: left;
 	margin-top: 0;
-	font-family: 'Open Sans', arial, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 	font-weight: 300;	
 	color: #666;
 }
@@ -1057,7 +1057,7 @@ ul.footer-link li a:hover{ color:#4E4E4E;}
 	
 #submit {
 	cursor:pointer;
-	font-family: 'Open Sans', arial, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 	font-weight: 300;	
 	padding: 12px 16px;
 	border: solid 1px #eaeaea;
@@ -1084,7 +1084,7 @@ ul.footer-link li a:hover{ color:#4E4E4E;}
 
 #respond h3,
 #comments h2 {
-	font-family: 'Open Sans', arial, sans-serif;
+	font-family: 'Open Sans', Oswald, Bebas Neue, sans-serif;
 	font-weight: 300;
 	color: #333;
 	font-size: 18px;
@@ -1241,6 +1241,10 @@ cite a {
 	text-decoration: underline;
 	padding: 0;
 	margin: 0;
+}
+
+#footer ul li a:hover {
+	color:#BFBFBF;
 }
 
 #footerinner {
@@ -1423,7 +1427,7 @@ a.googleplusicon:before {
 
 
 
-@media only screen and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px)  { 
+@media only screen and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px) { 
 
 	html {
 	    -webkit-text-size-adjust: none; 
@@ -1526,6 +1530,4 @@ a.googleplusicon:before {
     .footer-logo{ margin-top:0; text-align:center;}
     .footer-contact p{ font-size:1em; text-align:center;}
 	.footer-contact{ width:100%; float:none; padding: 0; margin: 0;}
-	
-	
 }
