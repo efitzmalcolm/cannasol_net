@@ -6,9 +6,13 @@ class TerpeneResultInline(admin.TabularInline):
     model = TerpeneResult
 
 
+class PotencyResultInline(admin.TabularInline):
+    model = PotencyResult
+
 class qaSampleAdmin(admin.ModelAdmin):
     inlines = [
         TerpeneResultInline,
+        PotencyResultInline
     ]
     list_display = ('date_received', 'strain', 'sample_type', 'sample_id', 'lot_id')
     list_filter = ('strain', 'sample_type')
