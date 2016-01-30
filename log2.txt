@@ -1,0 +1,1 @@
+SELECT "strains_terpene"."id", "strains_terpene"."name", "strains_terpene"."short_desc", "strains_terpene"."long_desc", "strains_terpene"."aroma", "strains_terpene"."flavor", "strains_terpene"."effects" FROM "strains_terpene" WHERE "strains_terpene"."name" = Î±-Humulene
