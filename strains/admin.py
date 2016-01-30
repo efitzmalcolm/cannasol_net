@@ -9,10 +9,13 @@ class TerpeneResultInline(admin.TabularInline):
 class PotencyResultInline(admin.TabularInline):
     model = PotencyResult
 
+
 class qaSampleAdmin(admin.ModelAdmin):
+
+    # Feilds sets next!
     inlines = [
+        PotencyResultInline,
         TerpeneResultInline,
-        PotencyResultInline
     ]
     list_display = ('date_received', 'strain', 'sample_type', 'sample_id', 'lot_id')
     list_filter = ('strain', 'sample_type')
