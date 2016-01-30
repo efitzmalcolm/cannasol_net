@@ -12,6 +12,14 @@ class qaSampleAdmin(admin.ModelAdmin):
     ]
 
 
+class TerpeneResultAdmin(admin.ModelAdmin):
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 admin.site.register(Strain)
 admin.site.register(Brand)
 admin.site.register(qaSample, qaSampleAdmin)
