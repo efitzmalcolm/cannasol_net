@@ -54,9 +54,14 @@ class qaSample(models.Model):
 
 class PotencyResult(models.Model):
 
-    name = models.CharField(max_length=50)
-    result = models.DecimalField(max_digits=4, decimal_places=2)
-    qa_sample = models.ForeignKey('qaSample')
+    delta9_thc = models.DecimalField(max_digits=4, decimal_places=2)
+    cbd = models.DecimalField(max_digits=4, decimal_places=2)
+    cbn = models.DecimalField(max_digits=4, decimal_places=2)
+    cbg = models.DecimalField(max_digits=4, decimal_places=2)
+    cbc = models.DecimalField(max_digits=4, decimal_places=2)
+    delta8_thc = models.DecimalField(max_digits=4, decimal_places=2)
+    total_cannabinoids = models.DecimalField(max_digits=4, decimal_places=2)
+    total_thc = models.DecimalField(max_digits=4, decimal_places=2)
 
     class Meta:
         verbose_name = "Potency Result"

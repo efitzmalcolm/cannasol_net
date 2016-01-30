@@ -10,18 +10,23 @@ class qaSampleAdmin(admin.ModelAdmin):
     inlines = [
         TerpeneResultInline,
     ]
+    list_display = ('date_received', 'strain', 'sample_type', 'sample_id', 'lot_id')
+    list_filter = ('strain', 'sample_type')
+    search_fields = ['^sample_id', '^lot_id']
+    show_full_result_count = True
 
 
 class TerpeneResultAdmin(admin.ModelAdmin):
 
-    def has_add_permission(self, request, obj=None):
-        return False
+    pass
 
-    def has_delete_permission(self, request, obj=None):
-        return False
+
+class PotencyResultAdmin(admin.ModelAdmin):
+    pass
 
 admin.site.register(Strain)
 admin.site.register(Brand)
 admin.site.register(qaSample, qaSampleAdmin)
 admin.site.register(Terpene)
-admin.site.register(TerpeneResult)
+admin.site.register(TerpeneResult, TerpeneResultAdmin)
+admin.site.register(PotencyResult, PotencyResultAdmin)
