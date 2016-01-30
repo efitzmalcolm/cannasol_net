@@ -53,6 +53,8 @@ class qaSample(models.Model):
 
 
 class PotencyResult(models.Model):
+    
+    qa_sample = models.ForeignKey('qaSample')
 
     delta9_thc = models.DecimalField(max_digits=4, decimal_places=2)
     cbd = models.DecimalField(max_digits=4, decimal_places=2)
