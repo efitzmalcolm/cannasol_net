@@ -4,9 +4,9 @@ from django.db import models
 class Strain(models.Model):
 
     name = models.CharField(max_length=50)
-    desc = models.TextField(blank=True, unique=True)
+    desc = models.TextField(blank=True, null=True)
     brand = models.ForeignKey('Brand')
-    thumbnail = models.ImageField()
+    thumbnail = models.ImageField(blank=True)
 
     class Meta:
         verbose_name = "Strain"
@@ -41,7 +41,7 @@ class qaSample(models.Model):
     strain = models.ForeignKey('Strain')
 
     lab_id = models.CharField(max_length=16)
-    sample_id = models.CharField(max_length=16)
+    sample_id = models.CharField(max_length=16, unique=True)
     lot_id = models.CharField(max_length=16)
 
     class Meta:
@@ -75,6 +75,7 @@ class TerpeneResult(models.Model):
     class Meta:
         verbose_name = "Terpene Result"
         verbose_name_plural = "Terpene Results"
+        unique_together = ('qa_sample', 'terpene')
 
     def __str__(self):
         return self.terpene + ": " + self.result
@@ -82,12 +83,12 @@ class TerpeneResult(models.Model):
 
 class Terpene(models.Model):
 
-    name = models.CharField(max_length=50)
-    short_desc = models.CharField(max_length=250, blank=True, unique=True)
-    long_desc = models.TextField(blank=True, unique=True)
-    aroma = models.CharField(max_length=250, blank=True, unique=True)
-    flavor = models.CharField(max_length=250, blank=True, unique=True)
-    effects = models.CharField(max_length=250, blank=True, unique=True)
+    name = models.CharField(max_length=50, unique=True)
+    short_desc = models.CharField(max_length=250, blank=True, null=True)
+    long_desc = models.TextField(blank=True, null=True)
+    aroma = models.CharField(max_length=250, blank=True, null=True)
+    flavor = models.CharField(max_length=250, blank=True, null=True)
+    effects = models.CharField(max_length=250, blank=True, null=True)
 
     class Meta:
         verbose_name = "Terpene"
