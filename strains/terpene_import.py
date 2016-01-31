@@ -35,34 +35,34 @@ with transaction.atomic():
                 )
 
             results = {
-                u'α-Pinene': row[7],
-                u'β-Pinene': row[8],
-                u'Terpinolene': row[9],
-                u'Geraniol': row[10],
-                u'α-Terpinene': row[11],
-                u'γ-Terpinene': row[12],
-                u'Camphene': row[13],
-                u'Linalool': row[14],
-                u'd-Limonene': row[15],
-                u'Citral': row[16],
-                u'Myrcene': row[17],
-                u'α-Terpineol': row[18],
-                u'Citronellol': row[19],
-                u'dl-Menthol': row[20],
-                u'1-Borneol': row[21],
-                u'2-Piperidone': row[22],
-                u'β-Caryophyllene': row[23],
-                u'α-Humulene': row[24],
-                u'Caryophyllene Oxide': row[25],
+                'α-Pinene': row[7],
+                'β-Pinene': row[8],
+                'Terpinolene': row[9],
+                'Geraniol': row[10],
+                'α-Terpinene': row[11],
+                'γ-Terpinene': row[12],
+                'Camphene': row[13],
+                'Linalool': row[14],
+                'd-Limonene': row[15],
+                'Citral': row[16],
+                'Myrcene': row[17],
+                'α-Terpineol': row[18],
+                'Citronellol': row[19],
+                'dl-Menthol': row[20],
+                '1-Borneol': row[21],
+                '2-Piperidone': row[22],
+                'β-Caryophyllene': row[23],
+                'α-Humulene': row[24],
+                'Caryophyllene Oxide': row[25],
             }
-            with open("log.txt", "w") as text_file:
+            with open("log.txt", "w", encoding="utf-8") as text_file:
                 print(results.keys(), file=text_file)
             for r, v in results.items():
                 if '<' not in v:
                     value = float(v.replace("%", ""))
-                    with open("log1.txt", "w") as text2:
+                    with open("log1.txt", "w", encoding="utf-8-sig") as text2:
                         print(r, file=text2)
-                    with open("log2.txt", "w", encoding="utf-8") as text3:
+                    with open("log2.txt", "w", encoding="utf-8-sig") as text3:
                         print(Terpene.objects.filter(name=r).query, file=text3)
                     TerpeneResult.objects.create(
                         terpene=Terpene.objects.get(name=r),
