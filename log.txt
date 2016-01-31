@@ -1,1 +1,0 @@
-{'Î±-Terpinene': 11, 'Geraniol': 10, 'Î±-Pinene': 7, 'dl-Menthol': 20, 'Myrcene': 17, 'Citral': 16, 'Citronellol': 19, 'Camphene': 13, 'Î³-Terpinene': 12, 'Î±-Terpineol': 18, '1-Borneol': 21, 'Î±-Humulene': 24, 'Î²-Caryophyllene': 23, 'Î²-Pinene': 8, '2-Piperidone': 22, 'Caryophyllene Oxide': 25, 'Linalool': 14, 'Terpinolene': 9, 'd-Limonene': 15}
