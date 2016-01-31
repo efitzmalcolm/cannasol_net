@@ -4,6 +4,7 @@ from strains.models import *
 
 class TerpeneResultInline(admin.TabularInline):
     model = TerpeneResult
+    extra = 0
 
 
 class PotencyResultInline(admin.TabularInline):
@@ -17,7 +18,7 @@ class qaSampleAdmin(admin.ModelAdmin):
         PotencyResultInline,
         TerpeneResultInline,
     ]
-    list_display = ('date_received', 'strain', 'sample_type', 'sample_id', 'lot_id')
+    list_display = ('sample_id', 'lot_id', 'strain', 'sample_type', 'date_received')
     list_filter = ('strain', 'sample_type')
     search_fields = ['^sample_id', '^lot_id']
     show_full_result_count = True

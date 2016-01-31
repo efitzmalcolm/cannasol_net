@@ -85,7 +85,7 @@ class TerpeneResult(models.Model):
         unique_together = ('qa_sample', 'terpene')
 
     def __str__(self):
-        return self.terpene + ": " + self.result
+        return self.terpene.name + ": " + str(self.result) + '%'
 
 
 class Terpene(models.Model):
@@ -96,6 +96,28 @@ class Terpene(models.Model):
     aroma = models.CharField(max_length=250, blank=True, null=True)
     flavor = models.CharField(max_length=250, blank=True, null=True)
     effects = models.CharField(max_length=250, blank=True, null=True)
+
+    row_map = {
+        'α-Pinene': 7,
+        'β-Pinene': 8,
+        'Terpinolene': 9,
+        'Geraniol': 10,
+        'α-Terpinene': 11,
+        'γ-Terpinene': 12,
+        'Camphene': 13,
+        'Linalool': 14,
+        'd-Limonene': 15,
+        'Citral': 16,
+        'Myrcene': 17,
+        'α-Terpineol': 18,
+        'Citronellol': 19,
+        'dl-Menthol': 20,
+        '1-Borneol': 21,
+        '2-Piperidone': 22,
+        'β-Caryophyllene': 23,
+        'α-Humulene': 24,
+        'Caryophyllene Oxide': 25,
+    }
 
     class Meta:
         verbose_name = "Terpene"

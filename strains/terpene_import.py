@@ -34,38 +34,11 @@ with transaction.atomic():
                     lot_id=row[2].replace(" ", "",),
                 )
 
-            results = {
-                'α-Pinene': row[7],
-                'β-Pinene': row[8],
-                'Terpinolene': row[9],
-                'Geraniol': row[10],
-                'α-Terpinene': row[11],
-                'γ-Terpinene': row[12],
-                'Camphene': row[13],
-                'Linalool': row[14],
-                'd-Limonene': row[15],
-                'Citral': row[16],
-                'Myrcene': row[17],
-                'α-Terpineol': row[18],
-                'Citronellol': row[19],
-                'dl-Menthol': row[20],
-                '1-Borneol': row[21],
-                '2-Piperidone': row[22],
-                'β-Caryophyllene': row[23],
-                'α-Humulene': row[24],
-                'Caryophyllene Oxide': row[25],
-            }
-            with open("log.txt", "w", encoding="utf-8") as text_file:
-                print(results.keys(), file=text_file)
-            for r, v in results.items():
-                if '<' not in v:
-                    value = float(v.replace("%", ""))
-                    with open("log1.txt", "w", encoding="utf-8-sig") as text2:
-                        print(r, file=text2)
-                    with open("log2.txt", "w", encoding="utf-8-sig") as text3:
-                        print(Terpene.objects.filter(name=r).query, file=text3)
+            for k, v in Terpene.row_map.items():
+                if '<' not in row[v]:
+                    value = float(row[v].replace("%", ""))
                     TerpeneResult.objects.create(
-                        terpene=Terpene.objects.get(name=r),
+                        terpene=Terpene.objects.get(name=k),
                         qa_sample=sample,
                         result=value,
                     )
