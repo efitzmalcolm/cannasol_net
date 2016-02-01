@@ -32,8 +32,18 @@ class TerpeneResultAdmin(admin.ModelAdmin):
 class PotencyResultAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Strain)
-admin.site.register(Brand)
+
+class StrainAdmin(admin.ModelAdmin):
+    fields = ('name', 'desc', 'brand', 'preview_image', 'image')
+    readonly_fields = ['preview_image']
+
+
+class BrandAdmin(admin.ModelAdmin):
+    fields = ('name', 'desc', 'preview_image', 'logo')
+    readonly_fields = ['preview_image']
+
+admin.site.register(Strain, StrainAdmin)
+admin.site.register(Brand, BrandAdmin)
 admin.site.register(qaSample, qaSampleAdmin)
 admin.site.register(Terpene)
 admin.site.register(TerpeneResult, TerpeneResultAdmin)

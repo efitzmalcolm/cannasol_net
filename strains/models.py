@@ -1,3 +1,4 @@
+from django.utils.safestring import mark_safe
 from django.db import models
 
 
@@ -6,7 +7,7 @@ class Strain(models.Model):
     name = models.CharField(max_length=50)
     desc = models.TextField(blank=True, null=True)
     brand = models.ForeignKey('Brand')
-    thumbnail = models.ImageField(blank=True)
+    image = models.ImageField(blank=True)
 
     class Meta:
         verbose_name = "Strain"
@@ -14,6 +15,12 @@ class Strain(models.Model):
 
     def __str__(self):
         return self.name
+
+    def preview_image(self):
+        if self.image and hasattr(self.image, 'url'):
+            return mark_safe('<img height="263px" width="263px" src="%s" />' % self.image.url)
+        else:
+            return mark_safe('<img height="263px" width="263px" src= "/static/strains/img/placeholder.png" />')
 
 
 class Brand(models.Model):
@@ -28,6 +35,9 @@ class Brand(models.Model):
 
     def __str__(self):
         return self.name
+
+    def preview_image(self):
+        return mark_safe('<img src="%s" />' % self.logo.url)
 
 
 class qaSample(models.Model):
