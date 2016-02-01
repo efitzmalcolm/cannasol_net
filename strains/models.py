@@ -59,7 +59,7 @@ class qaSample(models.Model):
         verbose_name_plural = "QA Samples"
 
     def __str__(self):
-        return self.sample_id + " - " + self.strain.name
+        return self.sample_id
 
 
 class PotencyResult(models.Model):

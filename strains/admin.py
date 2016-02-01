@@ -25,8 +25,16 @@ class qaSampleAdmin(admin.ModelAdmin):
 
 
 class TerpeneResultAdmin(admin.ModelAdmin):
+    list_display = ('qa_sample', 'terpene', 'result', 'get_strain')
+    list_filter = ('terpene', 'qa_sample__strain')
+    list_display_links = ['result']
+    search_fields = ['^qa_sample']
+    show_full_result_count = True
 
-    pass
+    def get_strain(self, obj):
+        return obj.qa_sample.strain
+    get_strain.short_description = 'Strain'
+    get_strain.admin_order_field = 'qa_sample__strain'
 
 
 class PotencyResultAdmin(admin.ModelAdmin):
@@ -34,13 +42,18 @@ class PotencyResultAdmin(admin.ModelAdmin):
 
 
 class StrainAdmin(admin.ModelAdmin):
-    fields = ('name', 'desc', 'brand', 'preview_image', 'image')
+    fields = (('name', 'brand'), 'desc', 'preview_image', 'image')
     readonly_fields = ['preview_image']
+    list_display = ('name', 'brand')
+    list_filter = ['brand']
+    search_fields = ['^name']
+    ordering = ['name']
 
 
 class BrandAdmin(admin.ModelAdmin):
     fields = ('name', 'desc', 'preview_image', 'logo')
     readonly_fields = ['preview_image']
+
 
 admin.site.register(Strain, StrainAdmin)
 admin.site.register(Brand, BrandAdmin)
