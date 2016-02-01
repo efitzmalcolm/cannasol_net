@@ -1,5 +1,4 @@
 import csv
-import sys
 from datetime import datetime
 from django.db import transaction
 from strains.models import *
