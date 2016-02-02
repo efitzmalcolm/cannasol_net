@@ -1,4 +1,5 @@
 from django.utils.safestring import mark_safe
+from django.db.models import Avg, Max, Min
 from django.db import models
 
 
@@ -12,15 +13,49 @@ class Strain(models.Model):
     class Meta:
         verbose_name = "Strain"
         verbose_name_plural = "Strains"
+        ordering = ['name']
 
     def __str__(self):
         return self.name
 
+    # Generates HTML Image preview for use at thumbnail on admin, etc...
     def preview_image(self):
         if self.image and hasattr(self.image, 'url'):
             return mark_safe('<img height="263px" width="263px" src="%s" />' % self.image.url)
         else:
             return mark_safe('<img height="263px" width="263px" src= "/static/strains/img/placeholder.png" />')
+
+    # Returns Dict of Terpenes mapped to a dict average, min, max values
+    def avgTerps(self):
+        samples = self.Samples.all()
+
+        # Build unique list of Terpenes that are present in sample results
+        terp_set = set()
+        for sample in samples:
+            for r in sample.getTerpeneResults():
+                terp_set.add(r.terpene)
+
+        # Build Dict of Terp Keys to pair result aggregates with
+        terp_dict = {}
+        for terp in terp_set:
+            results = TerpeneResult.objects.filter(qa_sample__strain=self, terpene=terp)
+            terp_dict[terp] = results.aggregate(average=Avg('result'), max=Max('result'), min=Min('result'))
+
+        return terp_dict
+
+    def avgPotency(self):
+        results = PotencyResult.objects.filter(qa_sample__strain=self)
+        averages = results.aggregate(
+            Avg('delta9_thc'), Min('delta9_thc'), Max('delta9_thc'),
+            Avg('cbd'), Min('cbd'), Max('cbd'),
+            Avg('cbn'), Min('cbn'), Max('cbn'),
+            Avg('cbg'), Min('cbg'), Max('cbg'),
+            Avg('cbc'), Min('cbc'), Max('cbc'),
+            Avg('delta8_thc'), Min('delta8_thc'), Max('delta8_thc'),
+            Avg('total_cannabinoids'), Min('total_cannabinoids'), Max('total_cannabinoids'),
+            Avg('total_thc'), Min('total_thc'), Max('total_thc'),
+        )
+        return averages
 
 
 class Brand(models.Model):
@@ -32,6 +67,7 @@ class Brand(models.Model):
     class Meta:
         verbose_name = "Brand"
         verbose_name_plural = "Brands"
+        ordering = ['name']
 
     def __str__(self):
         return self.name
@@ -48,7 +84,7 @@ class qaSample(models.Model):
     date_reported = models.DateField()
 
     sample_type = models.CharField(max_length=25)
-    strain = models.ForeignKey('Strain')
+    strain = models.ForeignKey('Strain', related_name='Samples')
 
     lab_id = models.CharField(max_length=16)
     sample_id = models.CharField(max_length=16, unique=True)
@@ -61,10 +97,13 @@ class qaSample(models.Model):
     def __str__(self):
         return self.sample_id
 
+    def getTerpeneResults(self):
+        return self.terpeneresult_set.all()
+
 
 class PotencyResult(models.Model):
 
-    qa_sample = models.ForeignKey('qaSample', unique=True)
+    qa_sample = models.OneToOneField('qaSample')
 
     delta9_thc = models.DecimalField(max_digits=4, decimal_places=2)
     cbd = models.DecimalField(max_digits=4, decimal_places=2)
@@ -132,6 +171,7 @@ class Terpene(models.Model):
     class Meta:
         verbose_name = "Terpene"
         verbose_name_plural = "Terpenes"
+        ordering = ['name']
 
     def __str__(self):
         return self.name
