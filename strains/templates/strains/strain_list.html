@@ -7,9 +7,9 @@
     {% for strain in object_list %}
     <div class="galleryItem hvr-grow">
         {% if strain.image %}
-        <a href="#"><img src={{ strain.image.url }} alt="thumbnail" /></a>
+        <a href="{{ strain.get_absolute_url }}"><img src={{ strain.image.url }} alt="thumbnail" /></a>
         {% else %}
-        <a href="#"><img src="{% static "strains/img/placeholder.png" %}" alt="thumbnail" /></a>
+        <a href="{{ strain.get_absolute_url }}"><img src="{% static "strains/img/placeholder.png" %}" alt="thumbnail" /></a>
         {% endif %}
     </div>
     {% endfor %}

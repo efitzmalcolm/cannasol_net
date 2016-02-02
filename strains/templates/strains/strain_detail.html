@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<head>
+    <link rel="stylesheet" href="{% static 'strains/css/table.css' %}">
+</head>
+
+<h1>{{ object.name }}</h1>
+<P> {{ object.preview_image }}</P>
+<P> {{ object.desc }}</P>
+<table>
+    <thead>
+        <tr>
+            <th>Terpene</th>
+            <th>Average</th>
+            <th>Min</th>
+            <th>Max</th>
+        </tr>
+    </thead>
+    {% for k, v in object.avgTerps.items %}
+    <tr>
+        <td>{{ k }}</td>
+        <td>{{ v.average }}%</td>
+        <td>{{ v.min }}</td>
+        <td>{{ v.max }}</td>
+    </tr>
+    {% endfor %}
+</table>

@@ -1,7 +1,11 @@
-from django.views.generic.list import ListView
+from django.views import generic
 
 from .models import Strain
 
 
-class StrainListView(ListView):
+class StrainListView(generic.ListView):
+    model = Strain
+
+
+class StrainDetailView(generic.DetailView):
     model = Strain

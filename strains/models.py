@@ -18,6 +18,9 @@ class Strain(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return "/strains/%i/" % self.id
+
     # Generates HTML Image preview for use at thumbnail on admin, etc...
     def preview_image(self):
         if self.image and hasattr(self.image, 'url'):
