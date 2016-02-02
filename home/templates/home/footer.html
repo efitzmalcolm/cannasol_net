@@ -1,13 +1,52 @@
+{% load staticfiles %}
+
 <div id="footer">
-</div>
-<div id="socialize">
-    <a class="socialicon googleplusicon" href="#" target="blank"></a>
-      <a class="socialicon instagramicon" href="#" target="blank"></a>
-          <a class="socialicon vimeoicon" href="#" target="blank"></a>
-          <a class="socialicon dribbleicon" href="#" target="blank"></a>
-      <a class="socialicon linkedinicon" href="#" target="blank"></a>
+
+
+
+<footer>
+    <div class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-2 col-xs-12">
+                                        <figure class="footer-logo">
+                        <img src="{% static 'home/img/square_logo.png' %}">
+                    </figure>
+                </div> 
+
+                <div class="col-lg-3 col-sm-3 col-xs-4">
+                    <ul class="footer-link">
+                        <li><a href='{% url 'strains' %}' title='STRAINS'>STRAINS</a></li><li><a href='{% url 'about' %}' title='ABOUT US'>ABOUT US</a></li><li><a href='#' title='CAREERS'>CAREERS</a></li><li><a href='#' title='SUSTAINABILITY'>SUSTAINABILITY</a></li><li><a href='{% url 'news' %}' title='NEWS'>NEWS</a></li><li><a href='#' title='FOR RETAILERS'>FOR RETAILERS</a></li> 
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-sm-3 col-xs-4">
+                    <div class="footer-newsletter">
+                        <script type="text/javascript">!function(){window.mc4wp||(window.mc4wp={listeners:[],forms:{on:function(n,w){window.mc4wp.listeners.push({event:n,callback:w})}}})}();</script><!-- MailChimp for WordPress v3.0.10 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-3569 mc4wp-form-basic" method="post" data-id="3569" data-name="Default sign-up form" ><div class="mc4wp-form-fields"><h3>NEWSLETTER SIGNUP</h3>
+<p>Give us your email and we’ll send you the occasional, non-annoying newsletter.</p>
+
+<input class="input-field" type="email" id="mc4wp_email" name="EMAIL" placeholder="Your email address" required />
+<input type="submit" class="input-button" value="SIGN UP" />
+<div style="display: none;"><input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></div><input type="hidden" name="_mc4wp_timestamp" value="1454021502" /><input type="hidden" name="_mc4wp_form_id" value="3569" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /></div><div class="mc4wp-response"></div></form><!-- / MailChimp for WordPress Plugin -->                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-4 col-xs-4">
+                    <div class="footer-contact">
+                      <ul class="footer-link">
+                        <aside id="text-2" class="widget widget_text"><h3>GET IN TOUCH</h3>			<div class="textwidget"><p><strong>(509) 322-4772</strong></p>
+<p><a href="mailto:#" title="Email 1">Email 1</a></p>
+<p><a href="mailto:#" title="Email 2">Email 2</a></p>
+<p><a href="mailto:#" title="Email 3">Email 3</a></p></div>
+		</aside>
+
       <a class="socialicon facebookicon" href="#" target="blank"></a>
       <a class="socialicon twittericon" href="#" target="blank"></a>
-  </div>
-  
+
+                  </ul>  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <div id="copyinfo"> © 2016  CannaSol  Farms </div>
+</footer> </div>
