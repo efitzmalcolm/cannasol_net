@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<head>
+    <link rel="stylesheet" href="{% static 'strains/css/thumb_grid.css' %}">
+</head>
+
+<div class = "thumb-grid">
+    {% for strain in object_list %}
+    <div class="galleryItem hvr-grow">
+        {% if strain.image %}
+        <a href="#"><img src={{ strain.image.url }} alt="thumbnail" /></a>
+        {% else %}
+        <a href="#"><img src="{% static "strains/img/placeholder.png" %}" alt="thumbnail" /></a>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
