@@ -1,7 +1,5 @@
 {% load staticfiles %}
-<head>
-    <link rel="stylesheet" href="{% static 'strains/css/table.css' %}">
-</head>
+<link rel="stylesheet" href="{% static 'strains/css/strain-detail.css' %}">
 
 <h1>{{ object.name }}</h1>
 <P> {{ object.preview_image }}</P>
@@ -24,3 +22,4 @@
     </tr>
     {% endfor %}
 </table>
+

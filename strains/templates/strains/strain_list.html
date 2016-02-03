@@ -1,16 +1,49 @@
+{% extends 'home/base.html' %}
 {% load staticfiles %}
-<head>
-    <link rel="stylesheet" href="{% static 'strains/css/thumb_grid.css' %}">
-</head>
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'strains/css/thumb_grid.css' %}">
 
 <div class = "thumb-grid">
     {% for strain in object_list %}
     <div class="galleryItem hvr-grow">
-        {% if strain.image %}
-        <a href="{{ strain.get_absolute_url }}"><img src={{ strain.image.url }} alt="thumbnail" /></a>
-        {% else %}
-        <a href="{{ strain.get_absolute_url }}"><img src="{% static "strains/img/placeholder.png" %}" alt="thumbnail" /></a>
-        {% endif %}
+        
+        <a id="strainItem" date-toggle="modal" href="{% url 'strain-detail' strain.id %}" data-target="#strainModal"><img src={% if strain.image %}{{ strain.image.url }}{% else %}"{% static "strains/img/placeholder.png" %}"{% endif %} alt="thumbnail" /></a>
+        
     </div>
     {% endfor %}
 </div>
+
+<div class="modal fade" id="strainModal" tabindex="-1" role="dialog" aria-labelledby="strainModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="strainModalLabel">Strain Detail</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>   
+            </div>
+            <div id="strain-modal-body" class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+jQuery(document).ready(function ($) {
+    $('#strainItem').click(function (e) {
+    e.preventDefault();
+    $.ajax({
+        type: "GET",
+        url: $(this).attr('href'),
+        success: function (data, textStatus, jqXHR) {
+           $('#strainModal').find('.modal-body').html(data);
+           $('#strainModal').modal('show');
+        }
+    });
+});
+});
+</script>
+{% endblock content %}
+

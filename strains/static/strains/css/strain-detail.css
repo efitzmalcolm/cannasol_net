@@ -21,3 +21,7 @@ thead {
     text-align: left;
     vertical-align: bottom
 }
+
+.modal-dialog {
+    margin-top: 125px;
+}
