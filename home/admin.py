@@ -3,7 +3,7 @@ from home.models import *
 
 
 class CarouselAdmin(admin.ModelAdmin):
-    fields = ('name', 'preview_image', 'image')
+    fields = ('name', 'header', 'preview_image', 'image')
     readonly_fields = ['preview_image']
 
 
@@ -26,7 +26,7 @@ class BrandSectionAdmin(admin.ModelAdmin):
 
 
 class InfoSectionAdmin(admin.ModelAdmin):
-    fields = ('preview_image', 'image')
+    fields = ('text', 'preview_image', 'image')
     readonly_fields = ['preview_image']
 
     def has_add_permission(self, request):

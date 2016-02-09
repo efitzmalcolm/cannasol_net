@@ -5,6 +5,7 @@ from django.db import models
 class CarouselImage(models.Model):
     name = models.CharField(max_length=50)
     image = models.ImageField()
+    header = models.CharField(max_length=20, blank=True, null=True)
 
     class Meta:
         verbose_name = 'Carousel Image'
@@ -48,6 +49,7 @@ class BrandItem(models.Model):
 
 class InfoSection(models.Model):
     image = models.ImageField()
+    text = models.TextField()
 
     # Generates HTML Image preview for use at thumbnail on admin, etc...
     def preview_image(self):

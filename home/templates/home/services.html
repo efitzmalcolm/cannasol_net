@@ -1,31 +1,28 @@
 ﻿<div id="services">
   <div id="servicesinner">
     <div class="serviceswidget">
-      <div id="text-3" class="widgets"><h2><span>Our Services</span></h2>     <div class="textwidget">Quisque viverra ullamcorper metus id vestibulum. Morbi eu elit et nibh porta congue. Aenean malesuada volutpat tortor sit amet malesuada. Cras imperdiet dapibus odio, sed mattis nisi aliquet vel. In tempus varius turpis ac eleifend.</div>
-    </div>    </div>
-                    <div class="postwrapper postwrapper-1">
-      <div class="servicespost"> <a class="servicelink" href="http://demo.vivathemes.com/themes/indigo/?page_id=20">
-        <img width="250" height="160" src="http://demo.vivathemes.com/themes/indigo/wp-content/uploads/2014/05/8-250x160.jpg" class="attachment-servicethumb wp-post-image" alt="8">        </a>
-        <h2 class="entry-title"><a href="http://demo.vivathemes.com/themes/indigo/?page_id=20" rel="bookmark" title="Aliquam gravida">
-          Aliquam gravida          </a></h2>
-        <p>Nunc dui risus, pretium nec iaculis ac, auctor eu arcu. Morbi venenatis bibendum lectus, id consequat purus tincidunt eu. </p>
-        <a class="more-link" href="http://demo.vivathemes.com/themes/indigo/?page_id=20">Read More</a> </div>
+      <div id="text-3" class="widgets">
+        <h2><span>{{ brand_section.title }}</span></h2>
+        <div class="textwidget">{{ brand_section.intro}}.</div>
+      </div>
     </div>
-            <div class="postwrapper postwrapper-2">
-      <div class="servicespost"> <a class="servicelink" href="http://demo.vivathemes.com/themes/indigo/?page_id=17">
-        <img width="250" height="160" src="http://demo.vivathemes.com/themes/indigo/wp-content/uploads/2014/05/6-250x160.jpg" class="attachment-servicethumb wp-post-image" alt="6">        </a>
-        <h2 class="entry-title"><a href="http://demo.vivathemes.com/themes/indigo/?page_id=17" rel="bookmark" title="Proin condimentum">
-          Proin condimentum          </a></h2>
-        <p>Nunc dui risus, pretium nec iaculis ac, auctor eu arcu. Morbi venenatis bibendum lectus, id consequat purus tincidunt eu.</p>
-        <a class="more-link" href="http://demo.vivathemes.com/themes/indigo/?page_id=17">Read More</a> </div>
+
+    {% for item in brand_items %}
+    <div class="postwrapper postwrapper-{{ forloop.counter }}">
+      <div class="servicespost">
+        <a class="servicelink" href="#">
+          <img width="250" height="160" src="{{ item.image.url }}" alt="{{ item.name }} Logo">
+        </a>
+        <h2 class="entry-title">
+          <a href="http://demo.vivathemes.com/themes/indigo/?page_id=20" rel="bookmark" title="Aliquam gravida">
+            {{ item.name }}
+          </a>
+        </h2>
+        <p>{{ item.desc }}</p>
+        <a class="more-link" href="#">Read More</a> 
+      </div>
     </div>
-            <div class="postwrapper postwrapper-3">
-      <div class="servicespost"> <a class="servicelink" href="http://demo.vivathemes.com/themes/indigo/?page_id=13">
-        <img width="250" height="160" src="http://demo.vivathemes.com/themes/indigo/wp-content/uploads/2014/05/1-250x160.jpg" class="attachment-servicethumb wp-post-image" alt="1">        </a>
-        <h2 class="entry-title"><a href="http://demo.vivathemes.com/themes/indigo/?page_id=13" rel="bookmark" title="Morbi venenatis">
-          Morbi venenatis          </a></h2>
-        <p>Nunc dui risus, pretium nec iaculis ac, auctor eu arcu. Morbi venenatis bibendum lectus, id consequat purus tincidunt eu.</p>
-        <a class="more-link" href="http://demo.vivathemes.com/themes/indigo/?page_id=13">Read More</a> </div>
-    </div>
-              </div>
+    {% endfor %}
+
+  </div>
 </div>

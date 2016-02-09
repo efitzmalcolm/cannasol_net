@@ -1,28 +1,22 @@
 <div id="slider" class="sl-slider-wrapper">
   <div class="sl-slider">
-            <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+    
+    {% for img in carousel_images %}
+
+    <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
       <div class="sl-slide-inner">
-        <div class="bg-img" style="background-image: url(
-														'../../static/home/img/farm_1.jpg'                             );"></div>
-        <h2>
-                    Premium Sungrown                  </h2>
-        <blockquote><a href="
-                                    									http://demo.vivathemes.com/themes/indigo/?page_id=5                                                                        " title="Premium Sungrown">Read More</a> </blockquote>
+        <div class="bg-img" style="background-image: url({{ img.image.url }});"></div>
+        {% if img.header %}<h2>{{img.header}}</h2>{% endif %}
       </div>
     </div>
-        <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
-      <div class="sl-slide-inner">
-        <div class="bg-img" style="background-image: url(
-														'../../static/home/img/farmer.jpg'                             );"></div>
-        <h2>
-                    Eco-Responsible                  </h2>
-        <blockquote><a href="
-                                    									http://demo.vivathemes.com/themes/indigo/?page_id=10                                                                        " title="Eco-Responsible">Read More</a> </blockquote>
-      </div>
-    </div>
-                <nav id="nav-arrows" class="nav-arrows"> <span class="nav-arrow-prev">Previous</span> <span class="nav-arrow-next">Next</span> </nav>
+    
+    {% endfor %}
+
+    <nav id="nav-arrows" class="nav-arrows">
+      <span class="nav-arrow-prev">Previous</span>
+      <span class="nav-arrow-next">Next</span>
+    </nav>
   </div>
   <!-- /sl-slider --> 
-  
 </div>
 <!-- /slider-wrapper -->

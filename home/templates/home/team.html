@@ -1,37 +1,21 @@
-﻿<div id="team">
+<div id="team">
   <div id="teaminner">
+    
     <div class="teamwidget">
-      <div id="text-4" class="widgets"><h2><span>Professional Team</span></h2>      <div class="textwidget">Quisque viverra ullamcorper metus id vestibulum. Morbi eu elit et nibh porta congue. Aenean malesuada volutpat tortor sit amet malesuada. Cras imperdiet dapibus odio, sed mattis nisi aliquet vel. In tempus varius turpis ac eleifend.</div>
-    </div>    </div>
-                        <div class="teammember teammember-1 onScreen">
-      <img width="300" height="300" src="http://demo.vivathemes.com/themes/indigo/wp-content/uploads/2014/05/t3.jpg" class="attachment-teammember wp-post-image" alt="t3">      <h2 class="entry-title">
-        Tony Pavlov      </h2>
-      <p>Phasellus fringilla vehicula egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam gravida porta tellus sit amet commodo.</p>
-      <div class="teamicons">
-                                                        <a class="socialicon flickricon" href="#" target="blank"></a>
-                                        <a class="socialicon tumblricon" href="#" target="blank"></a>
-                                <a class="socialicon googleplusicon" href="#" target="blank"></a>
-              </div>
+      <div id="text-4" class="widgets">
+        <h2><span>Sales Team</span></h2>
+        <div class="textwidget">Quisque viverra ullamcorper metus id vestibulum. Morbi eu elit et nibh porta congue. Aenean malesuada volutpat tortor sit amet malesuada. Cras imperdiet dapibus odio, sed mattis nisi aliquet vel. In tempus varius turpis ac eleifend.
+        </div>
+      </div>
     </div>
-            <div class="teammember teammember-2 onScreen">
-      <img width="300" height="300" src="http://demo.vivathemes.com/themes/indigo/wp-content/uploads/2014/05/t2.jpg" class="attachment-teammember wp-post-image" alt="t2">      <h2 class="entry-title">
-        Jane Figueroa      </h2>
-      <p>Phasellus fringilla vehicula egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam gravida porta tellus sit amet commodo.</p>
-      <div class="teamicons">
-                                                <a class="socialicon pinteresticon" href="#" target="blank"></a>
-                        <a class="socialicon flickricon" href="#" target="blank"></a>
-                        <a class="socialicon vimeoicon" href="#" target="blank"></a>
-                                              </div>
+    
+    {% for member in team_members %}
+    <div class="teammember teammember-{{ forloop.counter }} onScreen">
+      <img width="300" height="300" src="{{ member.image.url }}" alt="{{ member.name }} Image">
+      <a href="mailto:{{ member.email }}" target="_top"><h2 class="entry-title">{{ member.name }}</h2></a>
+      <p>{{ member.bio }}</p>
     </div>
-            <div class="teammember teammember-3 onScreen">
-      <img width="300" height="300" src="http://demo.vivathemes.com/themes/indigo/wp-content/uploads/2014/05/t1.jpg" class="attachment-teammember wp-post-image" alt="t1">      <h2 class="entry-title">
-        Linda Watford      </h2>
-      <p>Phasellus fringilla vehicula egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam gravida porta tellus sit amet commodo.</p>
-      <div class="teamicons">
-                <a class="socialicon twittericon" href="#" target="blank"></a>
-                        <a class="socialicon facebookicon" href="#" target="blank"></a>
-                                <a class="socialicon dribbleicon" href="#" target="blank"></a>
-                                                                      </div>
-    </div>
-              </div>
+    {% endfor %}
+
+  </div>
 </div>
