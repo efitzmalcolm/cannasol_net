@@ -21,7 +21,7 @@
           </div>
           <div class="col-lg-3 col-sm-3 col-xs-4">
             <div class="footer-newsletter">
-              <form action="{% url 'signup' %}" method="post">
+              <form action="{% url 'signup' %}?next={{request.path}}" method="post">
               {% csrf_token %}
 
                 <div class="mc4wp-form-fields">

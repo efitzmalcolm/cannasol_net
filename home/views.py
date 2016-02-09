@@ -1,6 +1,6 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from django.core.urlresolvers import reverse
+# from django.core.urlresolvers import reverse
 
 from .models import *
 
@@ -18,7 +18,7 @@ def index(request):
 
 
 def about(request):
-    return render_to_response('home/about.html')
+    return render(request, 'home/about.html')
 
 
 def wheretobuy(request):
@@ -27,7 +27,7 @@ def wheretobuy(request):
 
 
 def news(request):
-    return render_to_response('home/news.html')
+    return render(request, 'home/news.html')
 
 
 def signup(request):
@@ -36,4 +36,4 @@ def signup(request):
     except:
         pass
 
-    return HttpResponseRedirect(reverse('home'))
+    return HttpResponseRedirect(request.GET['next'])
