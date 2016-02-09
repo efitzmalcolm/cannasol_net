@@ -92,3 +92,10 @@ class Retailer(models.Model):
     def preview_image(self):
         if self.image and hasattr(self.image, 'url'):
             return mark_safe('<img height="263px" width="263px" src="%s" />' % self.image.url)
+
+
+class NewsletterContact(models.Model):
+    email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.email

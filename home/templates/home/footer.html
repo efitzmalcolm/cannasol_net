@@ -21,14 +21,15 @@
           </div>
           <div class="col-lg-3 col-sm-3 col-xs-4">
             <div class="footer-newsletter">
-              <form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-3569 mc4wp-form-basic" method="post" data-id="3569" data-name="Default sign-up form" >
+              <form action="{% url 'signup' %}" method="post">
+              {% csrf_token %}
+
                 <div class="mc4wp-form-fields">
                   <h3>NEWSLETTER SIGNUP</h3>
                   <p>Give us your email and we’ll send you the occasional, non-annoying newsletter.</p>
                   <input class="input-field" type="email" id="mc4wp_email" name="EMAIL" placeholder="Your email address" required />
                   <input type="submit" class="input-button" value="SIGN UP" />
-                  <div style="display: none;"><input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></div>
-                  <input type="hidden" name="_mc4wp_timestamp" value="1454021502" /><input type="hidden" name="_mc4wp_form_id" value="3569" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" />
+                  
                 </div>
                 <div class="mc4wp-response"></div>
               </form>

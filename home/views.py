@@ -1,4 +1,6 @@
 from django.shortcuts import render, render_to_response
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 
 from .models import *
 
@@ -26,3 +28,12 @@ def wheretobuy(request):
 
 def news(request):
     return render_to_response('home/news.html')
+
+
+def signup(request):
+    try:
+        NewsletterContact.objects.create(email=request.POST['EMAIL'])
+    except:
+        pass
+
+    return HttpResponseRedirect(reverse('home'))
