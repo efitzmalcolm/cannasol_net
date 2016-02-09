@@ -1,5 +1,6 @@
 from django.utils.safestring import mark_safe
 from django.db import models
+from django.core.validators import RegexValidator
 
 
 class CarouselImage(models.Model):
@@ -23,6 +24,10 @@ class CarouselImage(models.Model):
 class BrandSection(models.Model):
     title = models.CharField(max_length=30)
     intro = models.TextField()
+
+    class Meta:
+        verbose_name = 'Brand Section'
+        verbose_name_plural = 'Brand Section'
 
     def __str__(self):
         return self.title
@@ -50,6 +55,10 @@ class BrandItem(models.Model):
 class InfoSection(models.Model):
     image = models.ImageField()
     text = models.TextField()
+
+    class Meta:
+        verbose_name = 'Info Section'
+        verbose_name_plural = 'Info Section'
 
     # Generates HTML Image preview for use at thumbnail on admin, etc...
     def preview_image(self):
@@ -97,5 +106,33 @@ class Retailer(models.Model):
 class NewsletterContact(models.Model):
     email = models.EmailField(unique=True)
 
+    class Meta:
+        verbose_name = 'Newsletter Contact'
+        verbose_name_plural = 'Newsletter Contacts'
+
     def __str__(self):
         return self.email
+
+
+class RetailerContact(models.Model):
+    firstname = models.CharField(max_length=30)
+    lastname = models.CharField(max_length=30)
+    title = models.CharField(max_length=30, blank=True, null=True)
+    email = models.EmailField(unique=True)
+    phone_regex = RegexValidator(
+        regex=r'^\+?1?\d{9,15}$',
+        message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
+        )
+    phone = models.CharField(validators=[phone_regex], max_length=16)
+    storename = models.CharField(max_length=100)
+    address1 = models.CharField(max_length=100)
+    address2 = models.CharField(max_length=100, blank=True, null=True)
+    city = models.CharField(max_length=100)
+    license = models.CharField(max_length=20)
+
+    class Meta:
+        verbose_name = 'Retailer Contact'
+        verbose_name_plural = 'Retailer Contacts'
+
+    def __str__(self):
+        return "%s: %s %s" % (self.storename, self.firstname, self.lastname)

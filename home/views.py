@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-# from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse
 
 from .models import *
+from .forms import RetailerContactForm
 
 
 def index(request):
@@ -37,3 +38,17 @@ def signup(request):
         pass
 
     return HttpResponseRedirect(request.GET['next'])
+
+
+def retailerSignup(request):
+    if request.method == 'GET':
+        form = RetailerContactForm()
+    else:
+        form = RetailerContactForm(request.POST)
+        if form.is_valid():
+            newcontact = form.save()
+            newcontact.save()
+            return HttpResponseRedirect(reverse('home'))
+    return render(request, 'home/retailer_signup.html', {
+        'form': form,
+        })
