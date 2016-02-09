@@ -7,6 +7,13 @@ class CarouselAdmin(admin.ModelAdmin):
     readonly_fields = ['preview_image']
 
 
+class BrandItemInline(admin.TabularInline):
+    model = BrandItem
+    extra = 0
+    fields = ('name', 'desc', 'preview_image', 'image')
+    readonly_fields = ['preview_image']
+
+
 class BrandSectionAdmin(admin.ModelAdmin):
     fields = ('title', 'intro')
 
@@ -16,13 +23,6 @@ class BrandSectionAdmin(admin.ModelAdmin):
         base_add_permission = super(BrandSectionAdmin, self).has_add_permission(request)
         if base_add_permission:
             return not BrandSection.objects.exists()
-
-
-class BrandItemInline(admins.TabulerInline):
-    model = BrandItem
-    extra = 0
-    fields = ('name', 'desc', 'preview_image', 'image')
-    readonly_fields = ['preview_image']
 
 
 class InfoSectionAdmin(admin.ModelAdmin):

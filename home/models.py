@@ -16,7 +16,7 @@ class CarouselImage(models.Model):
     # Generates HTML Image preview for use at thumbnail on admin, etc...
     def preview_image(self):
         if self.image and hasattr(self.image, 'url'):
-            return mark_safe('<img height="263px" width="263px" src="%s" />' % self.image.url)
+            return mark_safe('<img height="263px" src="%s" />' % self.image.url)
 
 
 class BrandSection(models.Model):
@@ -43,7 +43,7 @@ class BrandItem(models.Model):
     # Generates HTML Image preview for use at thumbnail on admin, etc...
     def preview_image(self):
         if self.image and hasattr(self.image, 'url'):
-            return mark_safe('<img height="263px" width="263px" src="%s" />' % self.image.url)
+            return mark_safe('<img height="263px" src="%s" />' % self.image.url)
 
 
 class InfoSection(models.Model):
