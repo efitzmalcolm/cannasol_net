@@ -1182,12 +1182,11 @@ cite a {
     float: left;
     clear: left;
     width: 100%;
-    padding-top: 80px;
-    padding-bottom: 40px;
     background: #8E8870;
     position: relative;
     font-size: 17px;
     line-height: 150%;
+    margin-top: 20px;
 }
 
 #footer h3 {
@@ -1334,7 +1333,7 @@ ul {
     font-weight: 400;
     color: #fff;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 
 #socialize {

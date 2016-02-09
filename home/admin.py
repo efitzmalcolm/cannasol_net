@@ -41,7 +41,7 @@ class TeamMemberAdmin(admin.ModelAdmin):
 
 
 class RetailerAdmin(admin.ModelAdmin):
-    fields = ('name', 'preview_image', 'image')
+    fields = ('name', 'homepage',  'preview_image', 'image')
     readonly_fields = ['preview_image']
 
 

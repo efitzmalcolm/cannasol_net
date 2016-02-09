@@ -20,7 +20,8 @@ def about(request):
 
 
 def wheretobuy(request):
-    return render_to_response('home/wheretobuy.html')
+    context = {'retailers': Retailer.objects.all()}
+    return render(request, 'home/wheretobuy.html', context)
 
 
 def news(request):

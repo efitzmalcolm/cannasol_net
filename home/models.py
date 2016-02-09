@@ -79,6 +79,7 @@ class TeamMember(models.Model):
 class Retailer(models.Model):
     name = models.CharField(max_length=50)
     image = models.ImageField()
+    homepage = models.URLField()
 
     class Meta:
         verbose_name = 'Retailer'
