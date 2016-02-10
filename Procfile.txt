@@ -1,1 +1,0 @@
-web: gunicorn cannasol_net.wsgi --log-file -
