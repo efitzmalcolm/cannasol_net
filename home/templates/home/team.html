@@ -11,7 +11,7 @@
     
     {% for member in team_members %}
     <div class="teammember teammember-{{ forloop.counter }} onScreen">
-      <img width="300" height="300" src="{{ member.image.url }}" alt="{{ member.name }} Image">
+      <img width="300px" height="300px" src="{{ member.image.url }}" alt="{{ member.name }} Image">
       <a href="mailto:{{ member.email }}" target="_top"><h2 class="entry-title">{{ member.name }}</h2></a>
       <p>{{ member.bio }}</p>
     </div>
