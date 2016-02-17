@@ -38,6 +38,7 @@ class BrandItem(models.Model):
     desc = models.TextField()
     image = models.ImageField()
     section = models.ForeignKey('BrandSection')
+    order = models.PositiveSmallIntegerField()
 
     class Meta:
         verbose_name = 'Brand Item'
@@ -71,6 +72,7 @@ class TeamMember(models.Model):
     bio = models.TextField()
     email = models.EmailField()
     image = models.ImageField()
+    order = models.PositiveSmallIntegerField()
 
     class Meta:
         verbose_name = 'Team Member'
