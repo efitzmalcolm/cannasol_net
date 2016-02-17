@@ -9,7 +9,7 @@
       </div>
     </div>
     
-    {% for member in team_members %}
+    {% for member in team_members|dictsort:'order' %}
     <div class="teammember teammember-{{ forloop.counter }} onScreen">
       <img width="300px" height="300px" src="{{ member.image.url }}" alt="{{ member.name }} Portrait">
       <a href="mailto:{{ member.email }}" target="_top"><h2 class="entry-title">{{ member.name }}</h2></a>

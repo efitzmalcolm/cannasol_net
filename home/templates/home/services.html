@@ -7,7 +7,7 @@
       </div>
     </div>
 
-    {% for item in brand_items %}
+    {% for item in brand_items|dictsort:"order" %}
     <div class="postwrapper postwrapper-{{ forloop.counter }}">
       <div class="servicespost">
         <a class="servicelink" href="#">

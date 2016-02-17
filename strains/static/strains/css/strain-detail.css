@@ -1,4 +1,20 @@
+img {
+float: left;
+margin: 2% 0% 10% 20%;  
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    -webkit-margin-before: 4em;
+    -webkit-margin-after: 0em;
+    font-weight: bold;
+}
+
 table {
+    float: right;
+    margin: 2% 20% 10% 0%;
     border-collapse: collapse;
     border-spacing: 0;
     empty-cells: show;

@@ -86,6 +86,20 @@ class TeamMember(models.Model):
         if self.image and hasattr(self.image, 'url'):
             return mark_safe('<img height="263px" width="263px" src="%s" />' % self.image.url)
 
+'''
+class AboutUsSectionItem(models.Model):
+    title = models.CharField(max_length=30)
+    desc = models.TextField()
+    order = models.PositiveSmallIntegerField()
+
+    class Meta:
+        verbose_name = 'About Us Item'
+        verbose_name_plural = 'About Us Items'
+
+    def __str__(self):
+        return self.title
+'''
+
 
 class Retailer(models.Model):
     name = models.CharField(max_length=50)
