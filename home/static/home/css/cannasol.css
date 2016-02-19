@@ -530,6 +530,9 @@ a.servicelink:hover .attachment-servicethumb {
     position: relative;
     margin-top: 20px;
 }
+#infosection {
+    background:rgba(30,49,32,.8);
+}
 
 .frontwidget-bg-img {
     -webkit-box-sizing: content-box;
@@ -582,7 +585,9 @@ a.servicelink:hover .attachment-servicethumb {
 #frontwidget span {
     color: #fff;
 }
-    
+.tetwidget {
+    background: rgba(34,34,34,.7);
+}    
 
 
 /* Team Members Section */
