@@ -1,5 +1,7 @@
 import os
 
+ADMINS = [('Noah', 'noah@zenlogic.us')]
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.abspath(os.path.dirname(__name__))
 
