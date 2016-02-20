@@ -388,6 +388,10 @@ input#s:focus {
 #brandsinner {
     margin: 0 auto;
 }
+
+.intro {
+    max-width: 555px;
+}
     
 #brand-item-wrapper {
     max-width: 920px;
