@@ -439,6 +439,10 @@ a.brandlink:hover {
 
 }
   
+.brandspost p {
+    max-width: 555px;
+}
+
 #brands a.more-link {
     width: 100px;
     text-align: center;
