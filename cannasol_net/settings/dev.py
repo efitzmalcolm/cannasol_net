@@ -1,6 +1,7 @@
 from .base import *
 
 DEBUG = True
+SECRET_KEY = 'e8033f7cd7'
 
 DATABASES = {
     'default': {

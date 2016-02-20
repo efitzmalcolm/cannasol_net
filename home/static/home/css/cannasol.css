@@ -379,94 +379,32 @@ input#s:focus {
 
 /* Services section */
 
-#services {
-    width: 100%;
-    float: left;
-    clear: left;
+#brands {
     padding-bottom: 40px;
     text-align: center;
     margin-top: 40px;
 }
 
-#servicesinner {
-    max-width: 970px;
+#brandsinner {
     margin: 0 auto;
-    padding-left: 25px;
-    padding-right: 25px;
 }
     
-.serviceswidget {
-    width: 70%;
-    margin-left: 15%;
-    float: left;
-    margin-top: 0;
+#brand-item-wrapper {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.brandswidget {
     margin-bottom: 40px;
 }
 
-.serviceswidget h2 {
+.brandswidget h2 {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
 
-.serviceswidget .widgets {
-}
-
-.postwrapper {
-    width: 300px;
-    float: left;
-    margin: 0;
-    padding-bottom: 30px;
-    opacity: 0.2;
-     -moz-opacity: 0.2;
-    -webkit-transition: all 1.5s ease;
-    -moz-transition:    all 1.5s ease;
-    -ms-transition:     all 1.5s ease;
-    -o-transition:      all 1.5s ease;
-    transition:      all 1.5s ease;
-}
-
-.postwrapper-1,
-.postwrapper-4,
-.postwrapper-7,
-.postwrapper-10 {
-    margin-left: -20px;
-}
-
-.postwrapper-2,
-.postwrapper-5,
-.postwrapper-8,
-.postwrapper-11 {
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-    
-
-.postwrapper-3,
-.postwrapper-6,
-.postwrapper-9,
-.postwrapper-12 {
-    margin-right: -20px;
-}
-    
-
-.servicespost  {
-}
-     
-
-#services .onScreen {
-    margin: 0;
-    opacity: 1;
-    -moz-opacity: 1;
-}
-
-.servicespost {
-    width: 100%;
-}
-
-a.servicelink {
+a.brandlink {
     width: 250px;
     height: 160px;
     overflow: hidden;
@@ -476,19 +414,8 @@ a.servicelink {
     border: solid 3px #eaeaea;
 }
 
-.attachment-servicethumb {
-    -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-a.servicelink:hover {
+a.brandlink:hover {
     background: #ccc;
-}
-
-a.servicelink:hover .attachment-servicethumb {
     -ms-transform:scale(1.04); /* IE 9 */
     -moz-transform:scale(1.04); /* Firefox */
     -webkit-transform:scale(1.04); /* Safari and Chrome */
@@ -496,8 +423,8 @@ a.servicelink:hover .attachment-servicethumb {
     transform:scale(1.04);
 }
 
-.servicespost h2.entry-title a,
-.servicespost h2.entry-title {
+.brandspost h2.entry-title a,
+.brandspost h2.entry-title {
     text-align: center;
     font-weight: 600;
     color: #404040;
@@ -508,16 +435,13 @@ a.servicelink:hover .attachment-servicethumb {
 
 }
   
-#services a.more-link {
+#brands a.more-link {
     width: 100px;
     text-align: center;
     padding: 3px 0;
     margin: auto;
     float: none;
     margin-top: 20px;
-}
-
-#services a.more-link:hover {
 }
 
 /* Front Page Widget */

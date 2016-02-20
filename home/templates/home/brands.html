@@ -1,16 +1,16 @@
-﻿<div id="services">
-  <div id="servicesinner">
-    <div class="serviceswidget">
-      <div id="text-3" class="widgets">
+﻿<div id="brands" class="container-fluid">
+  <div id="brandsinnner">
+    <div class="brandswidget row">
+      <div class="col-md-6 col-md-offset-3" >
         <h2><span>{{ brand_section.title }}</span></h2>
-        <div class="textwidget">{{ brand_section.intro}}.</div>
+        <div>{{ brand_section.intro}}.</div>
       </div>
     </div>
 
+    <div class="row" id="brand-item-wrapper">
     {% for item in brand_items|dictsort:"order" %}
-    <div class="postwrapper postwrapper-{{ forloop.counter }}">
-      <div class="servicespost">
-        <a class="servicelink" href="#">
+      <div class="col-md-4 brandspost">
+        <a class="brandlink" href="#">
           <img width="250" height="160" src="{{ item.image.url }}" alt="{{ item.name }} Logo">
         </a>
         <h2 class="entry-title">
@@ -21,8 +21,7 @@
         <p>{{ item.desc }}</p>
         <a class="more-link" href="#">Read More</a> 
       </div>
-    </div>
     {% endfor %}
-
+    </div>
   </div>
 </div>
