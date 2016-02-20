@@ -10,16 +10,16 @@
     <div class="row" id="brand-item-wrapper">
     {% for item in brand_items|dictsort:"order" %}
       <div class="col-md-4 brandspost">
-        <a class="brandlink" href="#">
+        <a class="brandlink" href="#brands">
           <img width="250" height="160" src="{{ item.image.url }}" alt="{{ item.name }} Logo">
         </a>
         <h2 class="entry-title">
-          <a href="#" rel="_blank" title="{{ item.name }}">
+          <a href="#brands" rel="_blank" title="{{ item.name }}">
             {{ item.name }}
           </a>
         </h2>
         <p class="center-block">{{ item.desc }}</p>
-        <a class="more-link" href="#">Read More</a> 
+        <a class="more-link" href="#brands">Read More</a> 
       </div>
     {% endfor %}
     </div>
