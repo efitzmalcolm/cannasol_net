@@ -382,7 +382,7 @@ input#s:focus {
 #brands {
     padding-bottom: 40px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 #brandsinner {
@@ -1504,4 +1504,8 @@ a.googleplusicon:before {
     margin-top: 50%;
     transform: translateY(-50%);
     width: 300px;
+}
+#signupform {
+    width: 80%;
+    margin: 0 auto;
 }
