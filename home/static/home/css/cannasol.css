@@ -1499,9 +1499,9 @@ a.googleplusicon:before {
 .thumb {
     margin-bottom: 30px;
     height: 300px;
-    width: 300px;
 }
 .thumb img {
     margin-top: 50%;
-    transform: translate(-50%);
+    transform: translateY(-50%);
+    width: 300px;
 }
