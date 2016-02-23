@@ -1270,8 +1270,15 @@ ul {
     font-size: 14px;
     font-weight: 400;
     color: #fff;
-    margin-top: 20px;
+    margin-top: 1em;
     margin-bottom: 5px;
+}
+#disclaimer {
+    text-align: center;
+    font-size: .7em;
+    color: #fff;
+    line-height: 1;
+    float: left;
 }
 
 #socialize {
