@@ -6,7 +6,7 @@ DATABASES = {
                 'ENGINE': 'django.db.backends.postgresql_psycopg2',
                 'NAME': 'cannasol_net',
                 'USER': 'cannasol_net',
-                'PASSWORD': '85a35aed3e',
+                'PASSWORD': os.environ['DB_KEY'],
                 'HOST': 'localhost',
                 'PORT': '',
         }
