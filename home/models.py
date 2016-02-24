@@ -86,19 +86,35 @@ class TeamMember(models.Model):
         if self.image and hasattr(self.image, 'url'):
             return mark_safe('<img height="263px" width="263px" src="%s" />' % self.image.url)
 
-'''
-class AboutUsSectionItem(models.Model):
-    title = models.CharField(max_length=30)
-    desc = models.TextField()
-    order = models.PositiveSmallIntegerField()
+
+class AboutUsPage(models.Model):
+    header_image = models.ImageField()
+    title = 'About Us Section'
 
     class Meta:
-        verbose_name = 'About Us Item'
-        verbose_name_plural = 'About Us Items'
+        verbose_name = 'About Us'
+        verbose_name_plural = 'About Us'
 
     def __str__(self):
         return self.title
-'''
+
+    def preview_image(self):
+        if self.header_image and hasattr(self.header_image, 'url'):
+            return mark_safe('<img height="263px" src="%s" />' % self.header_image.url)
+
+
+class AboutUsSection(models.Model):
+    header = models.CharField(max_length=35)
+    text = models.TextField()
+    order = models.PositiveSmallIntegerField()
+    page = models.ForeignKey('AboutUsPage')
+
+    class Meta:
+        verbose_name = 'About Us Section'
+        verbose_name_plural = 'About Us Sections'
+
+    def __str__(self):
+        return self.header
 
 
 class Retailer(models.Model):

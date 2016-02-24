@@ -25,17 +25,21 @@ class BrandSectionAdmin(admin.ModelAdmin):
             return not BrandSection.objects.exists()
 
 
-'''
-class AboutUsSectionAdmin(admin.ModelAdmin):
-    fields = ('title', 'intro')
+class AboutUsSectionInline(admin.TabularInline):
+    model = AboutUsSection
+    extra = 0
+    fields = ('order', 'header', 'text')
 
-    inlines = [AboutUsItemInline]
+
+class AboutUsPageAdmin(admin.ModelAdmin):
+    inlines = [AboutUsSectionInline]
+    fields = ('preview_image', 'header_image')
+    readonly_fields = ['preview_image']
 
     def has_add_permission(self, request):
-        base_add_permission = super(BrandSectionAdmin, self).has_add_permission(request)
+        base_add_permission = super(AboutUsPageAdmin, self).has_add_permission(request)
         if base_add_permission:
-            return not BrandSection.objects.exists()
-'''
+            return not AboutUsPage.objects.exists()
 
 
 class InfoSectionAdmin(admin.ModelAdmin):
@@ -67,4 +71,4 @@ admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(Retailer, RetailerAdmin)
 admin.site.register(NewsletterContact)
 admin.site.register(RetailerContact)
-# admin.site.register(AboutUsSection, AboutUsSectionAdmin)
+admin.site.register(AboutUsPage, AboutUsPageAdmin)

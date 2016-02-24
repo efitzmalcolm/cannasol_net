@@ -1,27 +1,19 @@
 {% extends 'home/base.html' %}
 {% load staticfiles %}s
 
-    {% block content %}
+{% block content %}
     
 <link rel="stylesheet" href="{% static 'home/css/about_us.css' %}">
 
 <div class = "about">
 
-<img src="{% static 'home/img/producer.jpg' %}" />
-<h1>Sun Grown is Better</h1>
-<p> Nature intended for plants to be grown in the sun, and at Cannasol Farms, it is our dedication to growing the finest cannabis for over 20 years that led us to recognize that sun grown plants produce a better product.  With dozens of unique strains, we have spent years perfecting the art and science of sustainable cannabis.</p>
-
-<p>Because we believe cannabis only reaches its full potential in a natural environment, we grow our plants under the powerful Okanogan sunshine. Our complex sativa dominant strains take longer to mature, and their colas (the flower of the plant) need natural full spectrum sunlight to develop mature trichomes, which leads to more potent and rich cannabinoid profiles. You can see, smell, and taste the difference.</p>
-
+<img src="{{ page.header_image.url }}" />
 </div>
-
+{% for section in sections|dictsort:"order" %}
 <div class = "about">
-<h1>Curing is our craft</h1>
-<p>Because quality takes time, we don’t rush the plant. Many growers get eager to package their product, leaving it too green and raw. In order to achieve a more complex and refined terpene profile, you need time to slow cure as you would a fine tobacco or coffee. Cannasol Farms proudly slow cures our flowers for taste and experience rarely achieved in cannabis today. We select the best colas of the harvest to be hanged dry and slow cured in cool, low oxygen conditions. This allows the chlorophyl to degrade which smooths the smoke and allows the terpenes to be fully expressed, enhancing the cannabinoid profile. Cannasol Farms proudly long cures our flowers for taste and experience rarely achieved in cannabis today.</p>
+<h1>{{ section.header }}</h1>
+<p> {{ section.text|safe }}</p>
 </div>
-<div class ="about">
-<h1>No harsh pesticides</h1>
-<p>Cannasol cannabis is pure and natural, free from harsh pesticides and artificial chemicals. Only baking soda, potassium bicarbonate, and vinegar is used to prevent mildew and mold.</p>
-</div>
+{% endfor %}
 
-    {% endblock content %}
+{% endblock content %}
