@@ -10,7 +10,7 @@
     <div class="galleryItem hvr-grow">
         
         <a id="strainItem" date-toggle="modal" href="{% url 'strain-detail' strain.id %}" data-target="#strainModal"><img src={% if strain.image %}{{ strain.image.url }}{% else %}"{% static "strains/img/placeholder.png" %}"{% endif %} alt="thumbnail" /></a>
-        
+        <h4>{{ strain.name }}</h4>
     </div>
     {% endfor %}
 </div>

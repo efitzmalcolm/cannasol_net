@@ -2,12 +2,12 @@
     width: 75%;
     margin: 30px auto;
     overflow: hidden;
-    padding-bottom: 30px;
+    padding: 30px 0;
 }
 
 .galleryItem {
     float: left;
-
+    height: 215px;
     width: 11.5%;
     margin: .5%;
 }
@@ -16,6 +16,11 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+}
+.galleryItem h4 {
+  text-align: center;
+  margin-top: .5em;
+  font-size: 14px;
 }
 
 .hvr-grow {
