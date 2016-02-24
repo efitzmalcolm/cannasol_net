@@ -1,8 +1,13 @@
+{% extends 'home/base.html' %}
+
 <link rel="stylesheet" href="../../static/css/strain detail.css">
 
+    {% block content %}
+ 
 <h1>Bubba Kush</h1>
-<p> <img height="500px" width="500px" src="../../static/home/img/Bubba.jpg" /></p>
-<p> </p>
+
+<img height="500px" width="500px" src="../../static/home/img/Bubba.jpg" alt="bkush" />
+
 <table>
     <thead>
         <tr>
@@ -42,3 +47,5 @@
     </tr>
     
 </table>
+
+    {% endblock content %}

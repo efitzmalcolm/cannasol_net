@@ -1,6 +1,7 @@
 img {
-float: left;
-margin: 2% 0% 10% 20%;	
+display: block;
+float: none;
+margin: 5% auto;	
 }
 
 h1 {
@@ -13,13 +14,15 @@ h1 {
 }
 
 table {
-    float: right;
-	margin: 2% 20% 10% 0%;
+    float: none;
+	margin: 5% auto;
+	overflow-x: auto;
 	border-collapse: collapse;
     border-spacing: 0;
     empty-cells: show;
     border: 1px solid #cbcbcb
 }
+
 th, td {
     border-left: 1px solid #cbcbcb;
     border-width: 0 0 0 1px;
@@ -28,9 +31,11 @@ th, td {
     overflow: visible;
     padding: .5em 1em
 }
+
 tr:nth-child(2n-1) td {
     background-color: #f2f2f2
 }
+
 thead {
     background-color: #e0e0e0;
     color: #000;
@@ -40,4 +45,25 @@ thead {
 
 .modal-dialog {
     margin-top: 125px;
+}
+
+@media only screen and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px)  {
+
+table {
+	float: none;
+	display: block;
+	margin: auto;
+	width: 100%;
+	overflow-x: auto;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+    font-size: 2em;
+    -webkit-margin-before: 6em;
+    -webkit-margin-after: 0em;
+    font-weight: bold;
+}
+
 }
