@@ -19,7 +19,11 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'home/about.html')
+    context = {
+        'page': AboutUsPage.objects.first(),
+        'sections': AboutUsSection.objects.all(),
+    }
+    return render(request, 'home/about.html', context)
 
 
 def wheretobuy(request):

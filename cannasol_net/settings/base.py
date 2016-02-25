@@ -1,13 +1,9 @@
 import os
 
+ADMINS = [('Noah', 'noah@zenlogic.us')]
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.abspath(os.path.dirname(__name__))
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'l@u5e_g(t5+z11!w^1t!koq#xa%+12wj%xcf=8g@==t6i#4dw-'
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -92,13 +88,17 @@ USE_L10N = True
 USE_TZ = True
 
 
+USE_TZ = True
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#   os.path.join(BASE_DIR, 'staticfiles'),
+#)
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

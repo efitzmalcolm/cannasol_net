@@ -5,9 +5,9 @@
     <div class="row">
 
         {% for retailer in retailers %}
-        <div class="col-md-4">
+        <div class="col-md-4 thumb">
             <a href="{{ retailer.homepage }}" target="_blank">
-                <img src={{ retailer.image.url }} width="300px" alt="{{ retailer.name }} Logo" />
+                <img src={{ retailer.image.url }} alt="{{ retailer.name }} Logo" />
             </a>    
         </div>
         {% endfor %}

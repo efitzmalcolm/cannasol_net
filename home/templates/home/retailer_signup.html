@@ -2,7 +2,19 @@
 
 {% block content %}
 <div class="container">
-<form method="post" action="{% url 'retailerSignup' %}">
+
+<div id="brands">
+  <div id="brandsinner">
+    <div class="brandswidget">
+      <div class="text-center">
+        <h2><span>Do you want premium grown, sustainably farmed natural cannabis in your stores?</span></h2>
+        <div class="textwidget">Contact us to learn more for current prices and inventory to order a sample:</div>
+      </div>
+    </div>
+</div>
+</div>
+
+<form id="signupform" method="post" action="{% url 'retailerSignup' %}">
 {% csrf_token %}
 {% for field in form %}
 <div class="form-group">

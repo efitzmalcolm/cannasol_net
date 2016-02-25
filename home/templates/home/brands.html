@@ -1,0 +1,27 @@
+﻿<div id="brands" class="container-fluid">
+  <div id="brandsinnner">
+    <div class="brandswidget row">
+      <div class="col-md-6 col-md-offset-3" >
+        <h2><span>{{ brand_section.title }}</span></h2>
+        <div class="intro center-block">{{ brand_section.intro}}.</div>
+      </div>
+    </div>
+
+    <div class="row" id="brand-item-wrapper">
+    {% for item in brand_items|dictsort:"order" %}
+      <div class="col-md-4 brandspost">
+        <a class="brandlink" href="#brands">
+          <img width="250" height="160" src="{{ item.image.url }}" alt="{{ item.name }} Logo">
+        </a>
+        <h2 class="entry-title">
+          <a href="#brands" rel="_blank" title="{{ item.name }}">
+            {{ item.name }}
+          </a>
+        </h2>
+        <p class="center-block">{{ item.desc }}</p>
+        <a class="more-link" href="#brands">Read More</a> 
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>

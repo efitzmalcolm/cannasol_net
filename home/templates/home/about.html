@@ -1,4 +1,19 @@
 {% extends 'home/base.html' %}
+{% load staticfiles %}s
 
-    {% block content %}
-    {% endblock content %}
+{% block content %}
+    
+<link rel="stylesheet" href="{% static 'home/css/about_us.css' %}">
+
+<div class = "about">
+
+<img src="{{ page.header_image.url }}" />
+</div>
+{% for section in sections|dictsort:"order" %}
+<div class = "about">
+<h1>{{ section.header }}</h1>
+<p> {{ section.text|safe }}</p>
+</div>
+{% endfor %}
+
+{% endblock content %}

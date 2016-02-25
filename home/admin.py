@@ -10,7 +10,7 @@ class CarouselAdmin(admin.ModelAdmin):
 class BrandItemInline(admin.TabularInline):
     model = BrandItem
     extra = 0
-    fields = ('name', 'desc', 'preview_image', 'image')
+    fields = ('name', 'order', 'desc', 'preview_image', 'image')
     readonly_fields = ['preview_image']
 
 
@@ -25,6 +25,23 @@ class BrandSectionAdmin(admin.ModelAdmin):
             return not BrandSection.objects.exists()
 
 
+class AboutUsSectionInline(admin.TabularInline):
+    model = AboutUsSection
+    extra = 0
+    fields = ('order', 'header', 'text')
+
+
+class AboutUsPageAdmin(admin.ModelAdmin):
+    inlines = [AboutUsSectionInline]
+    fields = ('preview_image', 'header_image')
+    readonly_fields = ['preview_image']
+
+    def has_add_permission(self, request):
+        base_add_permission = super(AboutUsPageAdmin, self).has_add_permission(request)
+        if base_add_permission:
+            return not AboutUsPage.objects.exists()
+
+
 class InfoSectionAdmin(admin.ModelAdmin):
     fields = ('text', 'preview_image', 'image')
     readonly_fields = ['preview_image']
@@ -36,8 +53,10 @@ class InfoSectionAdmin(admin.ModelAdmin):
 
 
 class TeamMemberAdmin(admin.ModelAdmin):
-    fields = ('name', 'bio', 'email', 'preview_image', 'image')
+    fields = ('name', 'order', 'bio', 'email', 'preview_image', 'image')
     readonly_fields = ['preview_image']
+    list_display = ('name', 'order')
+    list_editable = ['order']
 
 
 class RetailerAdmin(admin.ModelAdmin):
@@ -52,3 +71,4 @@ admin.site.register(TeamMember, TeamMemberAdmin)
 admin.site.register(Retailer, RetailerAdmin)
 admin.site.register(NewsletterContact)
 admin.site.register(RetailerContact)
+admin.site.register(AboutUsPage, AboutUsPageAdmin)

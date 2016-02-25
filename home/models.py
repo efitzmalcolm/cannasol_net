@@ -38,6 +38,7 @@ class BrandItem(models.Model):
     desc = models.TextField()
     image = models.ImageField()
     section = models.ForeignKey('BrandSection')
+    order = models.PositiveSmallIntegerField()
 
     class Meta:
         verbose_name = 'Brand Item'
@@ -71,6 +72,7 @@ class TeamMember(models.Model):
     bio = models.TextField()
     email = models.EmailField()
     image = models.ImageField()
+    order = models.PositiveSmallIntegerField()
 
     class Meta:
         verbose_name = 'Team Member'
@@ -83,6 +85,36 @@ class TeamMember(models.Model):
     def preview_image(self):
         if self.image and hasattr(self.image, 'url'):
             return mark_safe('<img height="263px" width="263px" src="%s" />' % self.image.url)
+
+
+class AboutUsPage(models.Model):
+    header_image = models.ImageField()
+    title = 'About Us Section'
+
+    class Meta:
+        verbose_name = 'About Us'
+        verbose_name_plural = 'About Us'
+
+    def __str__(self):
+        return self.title
+
+    def preview_image(self):
+        if self.header_image and hasattr(self.header_image, 'url'):
+            return mark_safe('<img height="263px" src="%s" />' % self.header_image.url)
+
+
+class AboutUsSection(models.Model):
+    header = models.CharField(max_length=35)
+    text = models.TextField()
+    order = models.PositiveSmallIntegerField()
+    page = models.ForeignKey('AboutUsPage')
+
+    class Meta:
+        verbose_name = 'About Us Section'
+        verbose_name_plural = 'About Us Sections'
+
+    def __str__(self):
+        return self.header
 
 
 class Retailer(models.Model):

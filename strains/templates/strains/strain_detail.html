@@ -1,4 +1,6 @@
+{% extends 'home/base.html' %}
 {% load staticfiles %}
+{% block content %}
 <link rel="stylesheet" href="{% static 'strains/css/strain-detail.css' %}">
 
 <h1>{{ object.name }}</h1>
@@ -22,4 +24,4 @@
     </tr>
     {% endfor %}
 </table>
-
+{% endblock content %}
