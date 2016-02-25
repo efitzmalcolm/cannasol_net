@@ -16,3 +16,7 @@ text-align: center;
 .about p{
 text-align: center;
 }
+.about img {
+    display: block;
+    margin: 0 auto;
+}
