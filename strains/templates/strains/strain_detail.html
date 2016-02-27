@@ -1,11 +1,11 @@
 {% extends 'home/base.html' %}
 {% load staticfiles %}
 {% block content %}
-<link rel="stylesheet" href="{% static 'strains/css/strain-detail.css' %}">
 
+<div id = "strain">
 <h1>{{ object.name }}</h1>
-<P> {{ object.preview_image }}</P>
-<P> {{ object.desc }}</P>
+<img> {{ object.preview_image }} </>
+
 <table>
     <thead>
         <tr>
@@ -24,4 +24,7 @@
     </tr>
     {% endfor %}
 </table>
+
+<p> {{ object.desc }}</p>
+</div>
 {% endblock content %}

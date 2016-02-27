@@ -1,15 +1,23 @@
 img {
+width: 25%;
+height: 25%;
 float: left;
-margin: 2% 0% 10% 20%;  
+margin: 0% 0% 0% 0%;  
 }
 
 h1 {
     display: block;
-    text-align: center;
+    text-align: right;
     font-size: 3em;
-    -webkit-margin-before: 4em;
+	margin: 0% 10% 0% 0%;
+    -webkit-margin-before: 1em;
     -webkit-margin-after: 0em;
     font-weight: bold;
+}
+
+p {
+	margin: auto;
+	width: 60%;
 }
 
 table {

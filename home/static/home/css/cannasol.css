@@ -835,6 +835,51 @@ ul {
     margin: 5px;
 }
 
+/* Strain Detail*/
+
+#strain h1 {
+    display: inline-block;
+	width: 50%;
+    text-align: center;
+    font-size: 3em;
+	margin: 5% 0% 0% 0%;
+    font-weight: bold;
+}
+
+#strain img {
+    width: 30%;
+    height: 30%;
+    float: left;
+    margin: 0.5% 0% 0% 10%;
+}
+
+#strain p {
+	margin: 40% 0% 5% 0%;
+	display: block;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#strain table {
+    float: right;
+    margin: 3% 13% 0% 0%;
+}
+
+#strain th {
+    font-size: 2em;
+	max-width: 250px;
+    margin: 0;
+    overflow-x: auto;
+    padding: 1em 1em
+}
+
+#strain td {
+    font-size: 1em;
+	max-width: 250px;
+    margin: 0;
+    overflow-x: auto;
+    padding: 1em 1em
+}
 
 /* Right Sidebar*/
 
@@ -1373,7 +1418,7 @@ a.googleplusicon:before {
 
 
 
-@media only screen and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px) { 
+@media only screen and (max-width: 480px), screen and (max-device-width: 480px), screen and (max-width: 600px), screen and (max-width: 1500px) { 
 
     html {
         -webkit-text-size-adjust: none; 
@@ -1456,6 +1501,48 @@ a.googleplusicon:before {
     #content {
         width: 100%;
         text-align: justify;
+    }
+	
+    #strain h1 {
+    display: inline-block;
+	width: 100%;
+    text-align: center;
+    font-size: 2em;
+	margin: 25% 0% 0% 0%;
+    font-weight: bold;
+    }
+
+    #strain img {
+    width: 100%;
+    height: 100%;
+    float: none;
+    margin: 0% 0% 0% 0%;
+    }
+
+    #strain p {
+	margin: 10% 0% 0% 0%;
+	display: block;
+	text-align: center;
+	font-size: 2em;
+    }
+
+    #strain table {
+    float: none;
+	display: block;
+    margin: 10% 10%;
+	overflow-x: auto;
+    }
+
+    #strain th {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 1em 1em
+    }
+
+    #strain td {
+    font-size: 1.5em;
+    margin: 0;
+    padding: .5em .5em
     }
     
     #footerinner .widgets {
