@@ -880,7 +880,9 @@ ul {
     overflow-x: auto;
     padding: 1em 1em
 }
-
+#strain-thumb-container {
+    text-align: center;
+}
 /* Right Sidebar*/
 
 #rightbar {
@@ -1513,10 +1515,10 @@ a.googleplusicon:before {
     }
 
     #strain img {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     float: none;
-    margin: 0% 0% 0% 0%;
+    margin: 0% 0% 0% 25%;
     }
 
     #strain p {

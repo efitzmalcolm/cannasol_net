@@ -4,8 +4,9 @@
 
 <div id = "strain">
 <h1>{{ object.name }}</h1>
-<img> {{ object.preview_image }} </>
-
+<!--<div id="strain-thumb-container">-->
+<img src={% if strain.image %}{{ strain.image.url }}{% else %}"{% static "strains/img/placeholder.png" %}"{% endif %} alt="thumbnail" />
+<!--</div>-->
 <table>
     <thead>
         <tr>
